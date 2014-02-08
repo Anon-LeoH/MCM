@@ -74,12 +74,17 @@ class driveFSA(object):
         
         self.nowStatus["braking!"] = 0
         
+        Probability = random.random()
+        if Probability <= self.driver.trance:
+            self.driver.car.a = 0
+            return "move"
+        
         if self.driver.car.velocity < self.driver.holdV:
             self.driver.car.a = min(self.driver.holdV - self.driver.car.velocity, self.driver.road.maxa)
         
         if not self.nowStatus["pos"][0].curve:
             if self.nowStatus["carInView" + self.nowStatus["lane"]] == None:
-                self.driver.car.a = min(self.driver.road.Vmax - self.driver.car.velocity, self.driver.road.maxa)
+                self.driver.car.a = min(self.driver.maxV - self.driver.car.velocity, self.driver.road.maxa)
             elif self.driver.car.velocity > self.driver.holdV:
                 self.driver.car.a = -min(self.driver.car.velocity - self.driver.holdV, self.driver.road.maxa)
             else:
@@ -90,13 +95,13 @@ class driveFSA(object):
                         self.driver.car.a = 0
                         return "changeLane"
                     else:
-                        self.driver.car.a = -min(self.driver.car.velocity - self.nowStatus["carInChaseRight" + self.nowStatus["lane"]].velocity, self.driver.road.maxa)
+                        self.driver.car.a = -min(self.driver.car.velocity - self.nowStatus["carInChase" + self.nowStatus["lane"]].velocity, self.driver.road.maxa)
             else:
                 if self.nowStatus["carInChaseRight"] == None and self.nowStatus["carBackRight"] == None:
                     self.driver.car.a = 0
                     return "changeLane"
                 else:
-                    self.driver.car.a = -min(self.driver.car.velocity - self.nowStatus["carInChaseLeft" + self.nowStatus["lane"]].velocity, self.driver.road.maxa)
+                    self.driver.car.a = -min(self.driver.car.velocity - self.nowStatus["carInChase" + self.nowStatus["lane"]].velocity, self.driver.road.maxa)
         else:
             if self.driver.car.velocity > self.driver.holdV:
                 self.driver.car.a = -min(self.driver.car.velocity - self.driver.holdV, self.driver.road.maxa)

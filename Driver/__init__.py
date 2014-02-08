@@ -8,10 +8,10 @@ import random
 
 TYPE = ["normal", "badSight", "old", "drunk"]
 delta = {
-            "normal": (0, 0, 1),
-            "badSight": (-30, 0, 2),
-            "old": (-30, 1, 2),
-            "drunk": (-50, random.randint(2, 4), -1)
+            "normal": (0, 0, 1, 0),
+            "badSight": (-30, 0, 2, 0),
+            "old": (-30, 1, 2, 0),
+            "drunk": (-50, random.randint(2, 4), -1, 0.1)
         }
 
 class driver(object):
@@ -19,7 +19,6 @@ class driver(object):
         self._id = _id
         self.road = road
         self.journey = 0
-        self.density = 0
         
         Probability = random.random()
         if Probability < 0.7:
@@ -30,10 +29,10 @@ class driver(object):
             self.type = TYPE[2]
         else:
             self.type = TYPE[3]
-        safeLineError = random.normalvariate(0, 2)
-        if abs(safeLineError) > 3.5:
-            safeLineError = safeLineError / abs(safeLineError) * 3.5
-        self.safeLine = self.basicSafeLine = 10 + safeLineError + delta[self.type][2]
+        safeLineError = random.normalvariate(0, 4)
+        if abs(safeLineError) > 8:
+            safeLineError = safeLineError / abs(safeLineError) * 8
+        self.safeLine = self.basicSafeLine = 20 + safeLineError + delta[self.type][2]
         reflectTimeError = random.normalvariate(0, 0.3)
         if abs(reflectTimeError) > 0.8:
             reflectTimeError = reflectTimeError / abs(reflectTimeError) * 0.8
@@ -42,19 +41,25 @@ class driver(object):
         if abs(viewRangeError) > 40:
             viewRangeError = viewRangeError / abs(viewRangeError) * 40
         self.viewRange = self.basicViewRange = 250 + viewRangeError + delta[self.type][0]
-        tmpHoldV = random.normalvariate(road.Vmin + (road.Vmax - road.Vmin) / 2, 5)
-        if tmpHoldV < road.Vmin + (road.Vmax - road.Vmin) / 3:
-            tmpHoldV = road.Vmin + (road.Vmax - road.Vmin) / 3
-        elif tmpHoldV > road.Vmax:
-            tmpHoldV = road.Vmax
+        tmpHoldV = random.normalvariate(road.Vmin + (road.Vmax - road.Vmin) / 3, 20)
+        if tmpHoldV < road.Vmin:
+            tmpHoldV = road.Vmin
+        elif tmpHoldV > road.Vmax * 3 / 5:
+            tmpHoldV = road.Vmax * 3 / 5
         self.holdV = tmpHoldV
+        tmpMaxV = random.normalvariate(road.Vmin + (road.Vmax - road.Vmin) / 2, 5)
+        if tmpMaxV < self.holdV:
+            tmpMaxV = self.holdV
+        elif tmpMaxV > road.Vmax:
+            tmpMaxV = road.Vmax
+        self.maxV = tmpMaxV
         #revisited
         self.car = car(self.holdV)
         self.pos = (road.piece[0], 0, -self.car.length, 0)
         chaseRangeError = random.normalvariate(0, 5)
         if abs(chaseRangeError) > 10:
             chaseRangeError = chaseRangeError / abs(chaseRangeError) * 10
-        self.chaseRange = self.basicChaseRange = 25 + chaseRangeError
+        self.chaseRange = self.basicChaseRange = 50 + chaseRangeError
         if road.weather == "wet":
             self.viewRange -= 40
             self.chaseRange -= 10
@@ -63,6 +68,7 @@ class driver(object):
             self.FSA = FSA.driveFSA(self)
         else:
             self.FSA = No_Rule_FSA.driveFSA(self)
+        self.trance = 0.05 + delta[self.type][3]
         self.crashTime = 0
         self.crash = False
         self.option = "move"

@@ -9,7 +9,7 @@ class test(object):
     def __init__(self):
         self.road = Road()
         self.drivers = []
-        self.testTime = random.randint(18000, 30000)
+        self.testTime = random.randint(1800, 3000)
         self.inCar = 0
         self.receiveCar = 0
         self.crashCar = 0
@@ -19,10 +19,7 @@ class test(object):
     
     def carIn(self):
         length = len(self.drivers)
-        tmpCar = driver(length, self.road, self.type)
-        
-        if length != 0 and self.drivers[length-1].journey < tmpCar.safeLine:
-            return False
+        tmpCar = driver(length, self.road, self.type)        
         fl = fr = None
         for i in xrange(0, min(len(self.drivers), 3), 1):
             if fl != None and fr != None:
@@ -31,33 +28,35 @@ class test(object):
                 fl = self.drivers[i]
             if fr == None and self.drivers[i].FSA.nowStatus["lane"] == "Right":
                 fr = self.drivers[i]
-        safeList = []
+        chaseList = []
         viewList = []
         if fl != None:
-            if abs(fl.journey - tmpCar.journey) <= tmpCar.safeLine:
-                safeList.append(fl)
+            if abs(fl.journey - tmpCar.journey) <= tmpCar.chaseRange:
+                chaseList.append(fl)
                 viewList.append(fl)
             elif abs(fl.journey - tmpCar.journey) <= tmpCar.viewRange:
-                safeList.append(None)
+                chaseList.append(None)
                 viewList.append(fl)
             else:
                 fl = None
         if fl == None:
-            safeList.append(fl)
+            chaseList.append(fl)
             viewList.append(fl)
         if fr != None:
-            if abs(fr.journey - tmpCar.journey) <= tmpCar.safeLine:
-                safeList.append(fr)
+            if abs(fr.journey - tmpCar.journey) <= tmpCar.chaseRange:
+                chaseList.append(fr)
                 viewList.append(fr)
             elif abs(fr.journey - tmpCar.journey) <= tmpCar.viewRange:
-                safeList.append(None)
+                chaseList.append(None)
                 viewList.append(fr)
             else:
                 fr = None
         if fr == None:
-            safeList.append(fr)
+            chaseList.append(fr)
             viewList.append(fr)
-        tmpCar.FSA.driveInRoad(viewList, safeList)
+        if chaseList[0] != None and chaseList[1] != None:
+            return
+        tmpCar.FSA.driveInRoad(viewList, chaseList)
         self.drivers.append(tmpCar)
         self.inCar += 1
     
@@ -68,6 +67,7 @@ class test(object):
             self.inCarPro -= 1
         if self.inCarPro <= self.PoissonCoef:
             self.carIn()
+            self.inCarPro = 0
     
     def handleCarOut(self):
         removeList = []
@@ -94,13 +94,14 @@ class test(object):
         widthOfCar = 2.5
         for item in self.drivers:            
             deltaS = item.car.velocity * 0.5 + 0.5 ** 3 * item.car.a
+            item.journey += deltaS
             if item.option == "changeLane":
                 deltaS = (deltaS ** 2 - widthOfCar ** 2) ** 0.5
-            item.journey += deltaS
-            item.car.velocity += item.car.a
+            item.car.velocity += item.car.a * 0.5
+            if item.car.velocity > item.maxV:
+                item.car.velocity = item.maxV
             if item.car.velocity < 0:
                 item.car.velocity = 0
-            item.car.a = 0
             if item.crash:
                 continue
             tmpPos = item.pos[1] + deltaS
@@ -121,7 +122,7 @@ class test(object):
                         item.safeLine = item.basicSafeLine
                 except IndexError:
                     print "error id: " + str(item._id)
-            item.pos = (tmpPiece, tmpPos, item.journey + deltaS, item.journey + deltaS)            
+            item.pos = (tmpPiece, tmpPos, item.journey + deltaS, item.journey + deltaS)    
     
     def handleSwitch(self):
         for item in self.drivers:

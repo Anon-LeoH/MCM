@@ -40,10 +40,10 @@ class Road(object):
         self.maxa = g * self.fc
         self.minRadius = self.Vmax ** 2 / self.fc / g
         numberOfCurve = random.randint(0, 3)
-        self.piece.append(RoadPiece.pieceOfRoad(random.randint(200, 1000)))
+        self.piece.append(RoadPiece.pieceOfRoad(random.randint(2000, 8000)))
         for i in xrange(numberOfCurve):
-            self.piece.append(RoadPiece.makeCurve(RoadPiece.pieceOfRoad(random.randint(150, 500)), self.minRadius))
-            self.piece.append(RoadPiece.pieceOfRoad(random.randint(200, 1000)))
+            self.piece.append(RoadPiece.makeCurve(RoadPiece.pieceOfRoad(random.randint(400, 1300)), self.minRadius))
+            self.piece.append(RoadPiece.pieceOfRoad(random.randint(2000, 8000)))
         self.piece.append(RoadPiece.pieceOfRoad(0))
         self.length = 0
         for item in self.piece:
