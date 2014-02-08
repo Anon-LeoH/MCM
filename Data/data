@@ -1,10 +1,1 @@
-{'road length': 5016, 'car out': 205, 'put in time': 906, 'finish time': 1357, 'car in': 222, 'crash times': 17}
-{'road length': 8053, 'car out': 117, 'put in time': 445, 'finish time': 1029, 'car in': 117, 'crash times': 0}
-{'road length': 30040, 'car out': 186, 'put in time': 1089, 'finish time': 2617, 'car in': 186, 'crash times': 0}
-{'road length': 13136, 'car out': 295, 'put in time': 830, 'finish time': 1694, 'car in': 298, 'crash times': 3}
-{'road length': 2565, 'car out': 256, 'put in time': 751, 'finish time': 980, 'car in': 288, 'crash times': 32}
-{'road length': 27725, 'car out': 131, 'put in time': 874, 'finish time': 2263, 'car in': 131, 'crash times': 0}
-{'road length': 30932, 'car out': 127, 'put in time': 742, 'finish time': 2347, 'car in': 127, 'crash times': 0}
-{'road length': 27916, 'car out': 163, 'put in time': 566, 'finish time': 2417, 'car in': 163, 'crash times': 0}
-{'road length': 41443, 'car out': 143, 'put in time': 549, 'finish time': 3374, 'car in': 143, 'crash times': 0}
-{'road length': 25959, 'car out': 78, 'put in time': 781, 'finish time': 2078, 'car in': 78, 'crash times': 0}
+{'road length': 2433, 'car out': 188, 'put in time': 2360, 'finish time': 2501, 'car in': 192, 'crash times': 4}

@@ -1,8 +1,9 @@
 from Test import test
+from copy import deepcopy as cpy
 
 f1 = open("Data/data", "w")
 
-for i in xrange(10):
+for i in xrange(1):
     tmpTest = test()
     time = 0
     for j in xrange(tmpTest.testTime):
