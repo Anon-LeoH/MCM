@@ -9,7 +9,7 @@ class test(object):
     def __init__(self):
         self.road = Road()
         self.drivers = []
-        self.testTime = random.randint(4000, 12000)
+        self.testTime = random.randint(400, 1200)
         self.inCar = 0
         self.receiveCar = 0
         self.crashCar = 0
@@ -23,7 +23,7 @@ class test(object):
         if length != 0 and self.drivers[length-1].journey < tmpCar.safeLine:
             return False
         fl = fr = None
-        for i in xrange(0, len(self.drivers), 1):
+        for i in xrange(0, min(len(self.drivers), 3), 1):
             if fl != None and fr != None:
                 break
             if fl == None and self.drivers[i].FSA.nowStatus["lane"] == "Left":
@@ -60,13 +60,6 @@ class test(object):
         self.drivers.append(tmpCar)
         self.inCar += 1
     
-    def carOut(self, _id):
-        for item in self.drivers:
-            if item._id == _id:
-                self.drivers.remove(item)
-                self.receiveCar += 1
-                break
-    
     def handleCarIn(self):
         Probability = random.random()
         self.inCarPro += Probability
@@ -77,17 +70,25 @@ class test(object):
     
     #self.length -> self.road.length
     def handleCarOut(self):
+        removeList = []
         for item in self.drivers:
             if item.journey >= self.road.length:
-                self.carOut(item._id)
+                removeList.append(item)
+        for item in removeList:
+            self.drivers.remove(item)
+            self.receiveCar += 1
     
     def clearCrash(self):
+        removeList = []
         for item in self.drivers:
             if item.crash:
                 if item.crashTime <= 0:
-                    self.drivers.remove(item)
+                    removeList.append(item)
                 else:
                     item.crashTime -= 1
+        for item in removeList:
+            self.drivers.remove(item)
+            self.crashCar += 1
     
     def handleMove(self):
         for item in self.drivers:
@@ -96,9 +97,12 @@ class test(object):
             tmpPos = item.pos[1] + deltaS
             tmpPiece = item.pos[0]
             if tmpPos >= item.pos[0].length:
-                tmpPiece = self.road.piece[self.road.piece.index(item.pos[0]) + 1]
-                tmpPos = tmpPos - item.pos[0].length
-            item.pos = (tmpPiece, tmpPos, item.pos[2] + deltaS, item.pos[3] + deltaS)
+                try:
+                    tmpPiece = self.road.piece[self.road.piece.index(item.pos[0]) + 1]
+                    tmpPos = tmpPos - item.pos[0].length
+                except IndexError:
+                    print "error id: " + str(item._id)
+            item.pos = (tmpPiece, tmpPos, item.journey + deltaS, item.journey + deltaS)
             item.car.velocity += item.car.a
             item.car.a = 0
     
@@ -115,24 +119,21 @@ class test(object):
             return
         length = len(self.drivers)
         for i in xrange(0, len(self.drivers) - 2):
-            if self.drivers[i].pos[3] >= self.drivers[i + 1].pos[2] and self.drivers[i].FSA.nowStatus["lane"] == self.drivers[i + 1].FSA.nowStatus["lane"]:
+            if self.drivers[i].journey >= self.drivers[i + 1].journey and self.drivers[i].FSA.nowStatus["lane"] == self.drivers[i + 1].FSA.nowStatus["lane"]:
                 self.drivers[i].crash = self.drivers[i+1].crash = True
                 crashTime = abs(self.drivers[i].car.velocity - self.drivers[i + 1].car.velocity) * 360
                 self.drivers[i].crashTime = max(self.drivers[i].crashTime, crashTime)
                 self.drivers[i+1].crashTime = max(self.drivers[i+1].crashTime, crashTime)
-                self.crashCar += 1
-            elif self.drivers[i].pos[3] >= self.drivers[i + 2].pos[2] and self.drivers[i].FSA.nowStatus["lane"] == self.drivers[i + 2].FSA.nowStatus["lane"]:
+            elif self.drivers[i].journey >= self.drivers[i + 2].journey and self.drivers[i].FSA.nowStatus["lane"] == self.drivers[i + 2].FSA.nowStatus["lane"]:
                 self.drivers[i].crash = self.drivers[i+2].crash = True
                 crashTime = abs(self.drivers[i].car.velocity - self.drivers[i + 2].car.velocity) * 360
                 self.drivers[i].crashTime = max(self.drivers[i].crashTime, crashTime)
                 self.drivers[i+2].crashTime = max(self.drivers[i+2].crashTime, crashTime)
-                self.crashCar += 1
-        if self.drivers[-2].pos[3] >= self.drivers[-1].pos[2] and self.drivers[-2].FSA.nowStatus["lane"] == self.drivers[-1].FSA.nowStatus["lane"]:
+        if self.drivers[-2].journey >= self.drivers[-1].journey and self.drivers[-2].FSA.nowStatus["lane"] == self.drivers[-1].FSA.nowStatus["lane"]:
             self.drivers[-2].crash = self.drivers[-1].crash = True
             crashTime = abs(self.drivers[-2].car.velocity - self.drivers[-1].car.velocity) * 360
             self.drivers[-2].crashTime = max(self.drivers[-2].crashTime, crashTime)
             self.drivers[-1].crashTime = max(self.drivers[-1].crashTime, crashTime)
-            self.crashCar += 1
     
     def makeDecision(self):
         for item in self.drivers:
@@ -140,12 +141,16 @@ class test(object):
             for i in xrange(self.drivers.index(item) - 1, -1, -1):
                 if bl != None and br != None:
                     break
+                if (abs(self.drivers[i].journey - item.journey) > item.viewRange):
+                    break
                 if bl == None and self.drivers[i].FSA.nowStatus["lane"] == "Left":
                     bl = self.drivers[i]
                 if br == None and self.drivers[i].FSA.nowStatus["lane"] == "Right":
                     br = self.drivers[i]
             for i in xrange(self.drivers.index(item) + 1, len(self.drivers), 1):
                 if fl != None and fr != None:
+                    break
+                if (abs(self.drivers[i].journey - item.journey) > item.viewRange):
                     break
                 if fl == None and self.drivers[i].FSA.nowStatus["lane"] == "Left":
                     fl = self.drivers[i]

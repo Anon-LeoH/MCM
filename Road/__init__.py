@@ -39,7 +39,7 @@ class Road(object):
         self.fc = FC[(self.type, self.weather)]
         self.maxa = g * self.fc
         self.minRadius = self.Vmax ** 2 / self.fc / g
-        numberOfCurve = random.randint(0, 10)
+        numberOfCurve = random.randint(0, 3)
         self.piece.append(RoadPiece.pieceOfRoad(random.randint(2000, 10000)))
         for i in xrange(numberOfCurve):
             self.piece.append(RoadPiece.makeCurve(RoadPiece.pieceOfRoad(random.randint(600, 5000)), self.minRadius))
