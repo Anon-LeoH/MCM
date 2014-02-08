@@ -19,6 +19,7 @@ class driver(object):
         self._id = _id
         self.road = road
         self.journey = 0
+        self.density = 0
         
         Probability = random.random()
         if Probability < 0.7:

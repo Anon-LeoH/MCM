@@ -57,7 +57,7 @@ class driveFSA(object):
         
         #brakeforp
         Probability = random.random()
-        if Probability < 0.02:
+        if Probability < (self.driver.density ** 0.5) * 0.5:
             self.driver.car.a = random.normalvariate(1,self.driver.road.maxa)
             return "braking!"
         

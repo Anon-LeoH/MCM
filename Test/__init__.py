@@ -251,3 +251,26 @@ class test(object):
                 else:
                     item.safeLine = oneSmall
                 preCar[lane] = item
+
+    def calculateDensity(self):
+        maxDis = self.road.length / 10 / 2
+        for item in self.drivers:
+            item.density = 0.0
+        i = 0
+        length = len(self.drivers)
+        for j in xrange(0,length-1,1):
+            while self.drivers[i].journey - self.drivers[j].journey > maxDis:
+                self.drivers[i].density += j - i - 1
+                i += 1
+        for j in xrange(i,length-1,1):
+            self.drivers[j].density += length - j - 1
+            
+        i = length - 1
+        for j in xrange(length-1,0,-1):
+            while self.drivers[j].journey - self.drivers[i].journey > maxDis:
+                self.drivers[i].density += i - j - 1
+                i -= 1
+        for j in xrange(i,0,-1):
+            self.drivers[j].density += j
+        for item in self.drivers:
+            item.density /= maxDis * 2

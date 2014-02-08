@@ -1,0 +1,3 @@
+RightHand : {'Vmin': 16.666666666666668, 'road length': 2709, 'Vmax': 44.44444444444444, 'car out': 8815, 'car in': 8815, 'test time': 29052, 'crash times': 0}
+NoRule : {'Vmin': 16.666666666666668, 'road length': 2709, 'Vmax': 44.44444444444444, 'car out': 9086, 'car in': 9086, 'test time': 29054, 'crash times': 0}
+
