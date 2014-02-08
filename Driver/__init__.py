@@ -41,9 +41,9 @@ class driver(object):
         if abs(viewRangeError) > 40:
             viewRangeError = viewRangeError / abs(viewRangeError) * 40
         self.viewRange = 380 + viewRangeError + delta[self.type][0]
-        tmpHoldV = random.normalvariate(road.Vmin + (road.Vmax - road.Vmin) / 4 * 3, 5)
-        if tmpHoldV < road.Vmin + (road.Vmax - road.Vmin) / 2:
-            tmpHoldV = road.Vmin + (road.Vmax - road.Vmin) / 2
+        tmpHoldV = random.normalvariate(road.Vmin + (road.Vmax - road.Vmin) / 2, 5)
+        if tmpHoldV < road.Vmin + (road.Vmax - road.Vmin) / 3:
+            tmpHoldV = road.Vmin + (road.Vmax - road.Vmin) / 3
         elif tmpHoldV > road.Vmax:
             tmpHoldV = road.Vmax
         self.holdV = tmpHoldV
