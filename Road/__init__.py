@@ -42,5 +42,8 @@ class Road(object):
         for i in xrange(numberOfCurve):
             self.piece.append(makeCurve(pieceOfRoad(random.randint(1000, 5000)), self.minRadius))
             self.piece.append(pieceOfRoad(random.randint(2000, 80000)))
+        self.length = 0
+        for item in self.piece:
+            self.length += item.length
         self.numberOfPiece = len(self.piece)
         
