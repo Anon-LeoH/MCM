@@ -2,7 +2,7 @@ import sys
 sys.path.append('../')
 
 from Car import car
-from FSA import driveFSA
+from . import FSA
 import random
 
 TYPE = ["normal", "badSight", "old", "drunk"]
@@ -58,7 +58,7 @@ class driver(object):
             self.viewRange -= 40
             self.chaseRange -= 10
             self.safeLine += 1
-        self.FSA = driveFSA(self)
+        self.FSA = FSA.driveFSA(self)
         self.crashTime = 0
         self.crash = False
         self.option = "move"

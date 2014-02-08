@@ -4,13 +4,12 @@ sys.path.append('../')
 from Road import Road
 from Driver import driver
 import random
-from scipy import stats
 
 class test(object):
     def __init__(self):
         self.road = Road()
         self.drivers = []
-        self.testTime = random.randint(6000, 18000)
+        self.testTime = random.randint(4000, 12000)
         self.inCar = 0
         self.receiveCar = 0
         self.crashCar = 0
@@ -34,10 +33,10 @@ class test(object):
         safeList = []
         viewList = []
         if fl != None:
-            if abs(fl.journey - item.journey) <= item.safeLine:
+            if abs(fl.journey - tmpCar.journey) <= tmpCar.safeLine:
                 safeList.append(fl)
                 viewList.append(fl)
-            elif abs(fl.journey - item.journey) <= item.viewRange:
+            elif abs(fl.journey - tmpCar.journey) <= tmpCar.viewRange:
                 safeList.append(None)
                 viewList.append(fl)
             else:
@@ -46,11 +45,10 @@ class test(object):
             safeList.append(fl)
             viewList.append(fl)
         if fr != None:
-            if abs(fr.journey - item.journey) <= item.safeLine:
+            if abs(fr.journey - tmpCar.journey) <= tmpCar.safeLine:
                 safeList.append(fr)
-                chaseList.append(fr)
                 viewList.append(fr)
-            elif abs(fr.journey - item.journey) <= item.viewRange:
+            elif abs(fr.journey - tmpCar.journey) <= tmpCar.viewRange:
                 safeList.append(None)
                 viewList.append(fr)
             else:

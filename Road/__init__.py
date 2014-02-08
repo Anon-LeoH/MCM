@@ -1,4 +1,4 @@
-from RoadPiece import pieceOfRoad, makeCurve
+from . import RoadPiece
 import random
 
 VLimit = [(40 / 3.6, 80 / 3.6), (40 / 3.6, 120 / 3.6),
@@ -17,6 +17,7 @@ g = 9.83218
      
 class Road(object):
     def __init__(self):
+        self.g = g
         Probability = random.random()
         for i in xrange(5):
             if Probability <= (i + 1) * 0.2:
@@ -36,14 +37,16 @@ class Road(object):
         else:
             self.weather = "wet"
         self.fc = FC[(self.type, self.weather)]
+        self.maxa = g * self.fc
         self.minRadius = self.Vmax ** 2 / self.fc / g
         numberOfCurve = random.randint(0, 10)
-        self.piece.append(pieceOfRoad(random.randint(2000, 80000)))
+        self.piece.append(RoadPiece.pieceOfRoad(random.randint(2000, 10000)))
         for i in xrange(numberOfCurve):
-            self.piece.append(makeCurve(pieceOfRoad(random.randint(1000, 5000)), self.minRadius))
-            self.piece.append(pieceOfRoad(random.randint(2000, 80000)))
+            self.piece.append(RoadPiece.makeCurve(RoadPiece.pieceOfRoad(random.randint(600, 5000)), self.minRadius))
+            self.piece.append(RoadPiece.pieceOfRoad(random.randint(2000, 10000)))
+        self.piece.append(RoadPiece.pieceOfRoad(0))
         self.length = 0
         for item in self.piece:
             self.length += item.length
-        self.numberOfPiece = len(self.piece)
+        self.numberOfPiece = len(self.piece) - 1
         
