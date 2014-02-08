@@ -1,23 +1,27 @@
-from Road import road
+import sys
+sys.path.append('../')
+
+from Road import Road
 from Driver import driver
 import random
 from scipy import stats
 
 class test(object):
     def __init__(self):
-        self.road = road()
+        self.road = Road()
         self.drivers = []
         self.testTime = random.randint(6000, 18000)
         self.inCar = 0
         self.receiveCar = 0
         self.crashCar = 0
-        self.PoissonCoef = randint(0.05, 0.34)
+        self.PoissonCoef = random.uniform(0.05, 0.34)
         self.inCarPro = 0
     
     def carIn(self):
         length = len(self.drivers)
-        tmpCar = driver(length), self.road)
-        if len != 0 and self.drivers[len-1].journey < tmpCar.safeLine:
+        tmpCar = driver(length, self.road)
+        #len -> length
+        if length != 0 and self.drivers[length-1].journey < tmpCar.safeLine:
             return False
         fl = fr = None
         for i in xrange(0, len(self.drivers), 1):
@@ -73,9 +77,10 @@ class test(object):
         if self.inCarPro <= self.PoissonCoef:
             self.carIn()
     
+    #self.length -> self.road.length
     def handleCarOut(self):
         for item in self.drivers:
-            if item.journey >= self.length:
+            if item.journey >= self.road.length:
                 self.carOut(item._id)
     
     def clearCrash(self):

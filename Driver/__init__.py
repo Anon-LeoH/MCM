@@ -1,3 +1,6 @@
+import sys
+sys.path.append('../')
+
 from Car import car
 from FSA import driveFSA
 import random
@@ -5,8 +8,8 @@ import random
 TYPE = ["normal", "badSight", "old", "drunk"]
 delta = {
             "normal": (0, 0, 0),
-            "badSight": (-30, 0, 2)
-            "old": (-30, 1, 2)
+            "badSight": (-30, 0, 2),
+            "old": (-30, 1, 2),
             "drunk": (-50, random.randint(2, 4), -1)
         }
 
@@ -14,9 +17,9 @@ class driver(object):
     def __init__(self, _id, road):
         self._id = _id
         self.road = road
-        self.car = Car()
-        self.pos = (road.piece[0], 0, -self.car.length, 0)
-        self.journy = 0
+        #self.car = car()
+        #self.pos = (road.piece[0], 0, -self.car.length, 0)
+        self.journey = 0
         Probability = random.random()
         if Probability < 0.65:
             self.type = TYPE[0]
@@ -44,6 +47,9 @@ class driver(object):
         elif tmpHoldV > road.Vmax:
             tmpHoldV = road.Vmax
         self.holdV = tmpHoldV
+        #revisited
+        self.car = car(self.holdV)
+        self.pos = (road.piece[0], 0, -self.car.length, 0)
         chaseRangeError = random.normalvariate(0, 3)
         if abs(chaseRangeError) > 6:
             chaseRangeError = chaseRangeError / abs(chaseRangeError) * 10

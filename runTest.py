@@ -1,6 +1,6 @@
 from Test import test
 
-f1 = open("./Data/save_righthand.data", "w")
+f1 = open("Data/data", "w")
 
 for i in xrange(100000):
     tmpTest = test()
