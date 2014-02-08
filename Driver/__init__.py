@@ -7,7 +7,7 @@ import random
 
 TYPE = ["normal", "badSight", "old", "drunk"]
 delta = {
-            "normal": (0, 0, 0),
+            "normal": (0, 0, 1),
             "badSight": (-30, 0, 2),
             "old": (-30, 1, 2),
             "drunk": (-50, random.randint(2, 4), -1)
@@ -23,16 +23,16 @@ class driver(object):
         Probability = random.random()
         if Probability < 0.7:
             self.type = TYPE[0]
-        elif Probability < 0.5:
+        elif Probability < 0.85:
             self.type = TYPE[1]
         elif Probability < 0.99:
             self.type = TYPE[2]
         else:
             self.type = TYPE[3]
-        safeLineError = random.normalvariate(0, 1.5)
+        safeLineError = random.normalvariate(0, 1)
         if abs(safeLineError) > 1.2:
             safeLineError = safeLineError / abs(safeLineError) * 1.2
-        self.safeLine = 9 + safeLineError + delta[self.type][2]
+        self.safeLine = 10 + safeLineError + delta[self.type][2]
         reflectTimeError = random.normalvariate(0, 0.3)
         if abs(reflectTimeError) > 0.8:
             reflectTimeError = reflectTimeError / abs(reflectTimeError) * 0.8
@@ -40,7 +40,7 @@ class driver(object):
         viewRangeError = random.normalvariate(0, 10)
         if abs(viewRangeError) > 40:
             viewRangeError = viewRangeError / abs(viewRangeError) * 40
-        self.viewRange = 260 + viewRangeError + delta[self.type][0]
+        self.viewRange = 380 + viewRangeError + delta[self.type][0]
         tmpHoldV = random.normalvariate(road.Vmin + (road.Vmax - road.Vmin) / 4 * 3, 5)
         if tmpHoldV < road.Vmin + (road.Vmax - road.Vmin) / 2:
             tmpHoldV = road.Vmin + (road.Vmax - road.Vmin) / 2
