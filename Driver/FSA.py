@@ -42,6 +42,9 @@ class driveFSA(object):
             self.nowStatus["onLaneDistance"] = self.nowStatus["carInSafeLineRight"].journey
     
     def judge(self, carInView, carInSafeLine, carBack, carChase):
+        if self.driver.crash:
+            self.driver.car.a = self.driver.road.maxa
+            return "crash"
         self.nowStatus["pos"] = self.driver.pos
         self.nowStatus["carInViewLeft"] = carInView[1]
         self.nowStatus["carInViewRight"] = carInView[0]

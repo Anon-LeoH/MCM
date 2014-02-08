@@ -31,18 +31,18 @@ class driver(object):
             self.type = TYPE[2]
         else:
             self.type = TYPE[3]
-        safeLineError = random.normalvariate(0, 1)
-        if abs(safeLineError) > 1.2:
-            safeLineError = safeLineError / abs(safeLineError) * 1.2
-        self.safeLine = 10 + safeLineError + delta[self.type][2]
+        safeLineError = random.normalvariate(0, 2)
+        if abs(safeLineError) > 3.5:
+            safeLineError = safeLineError / abs(safeLineError) * 3.5
+        self.safeLine = self.basicSafeLine = 10 + safeLineError + delta[self.type][2]
         reflectTimeError = random.normalvariate(0, 0.3)
         if abs(reflectTimeError) > 0.8:
             reflectTimeError = reflectTimeError / abs(reflectTimeError) * 0.8
-        self.reflectTime = 0.2 + reflectTimeError + delta[self.type][1]
+        self.reflectTime = 0.6 + reflectTimeError + delta[self.type][1]
         viewRangeError = random.normalvariate(0, 10)
         if abs(viewRangeError) > 40:
             viewRangeError = viewRangeError / abs(viewRangeError) * 40
-        self.viewRange = 380 + viewRangeError + delta[self.type][0]
+        self.viewRange = self.basicViewRange = 250 + viewRangeError + delta[self.type][0]
         tmpHoldV = random.normalvariate(road.Vmin + (road.Vmax - road.Vmin) / 2, 5)
         if tmpHoldV < road.Vmin + (road.Vmax - road.Vmin) / 3:
             tmpHoldV = road.Vmin + (road.Vmax - road.Vmin) / 3
@@ -52,10 +52,10 @@ class driver(object):
         #revisited
         self.car = car(self.holdV)
         self.pos = (road.piece[0], 0, -self.car.length, 0)
-        chaseRangeError = random.normalvariate(0, 3)
-        if abs(chaseRangeError) > 6:
+        chaseRangeError = random.normalvariate(0, 5)
+        if abs(chaseRangeError) > 10:
             chaseRangeError = chaseRangeError / abs(chaseRangeError) * 10
-        self.chaseRange = 25 + chaseRangeError
+        self.chaseRange = self.basicChaseRange = 25 + chaseRangeError
         if road.weather == "wet":
             self.viewRange -= 40
             self.chaseRange -= 10

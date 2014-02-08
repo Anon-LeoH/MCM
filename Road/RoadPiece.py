@@ -11,6 +11,6 @@ class pieceOfRoad(object):
 def makeCurve(RoadPiece, minRadius):
     RoadPiece.curve = True
     RoadPiece.radius = random.uniform(minRadius, minRadius + 1000)
-    RoadPiece.viewLength = ((RoadPiece.radius + 7.5) ** 2 - RoadPiece.radius ** 2) ** 0.5
+    RoadPiece.viewRange = ((RoadPiece.radius + 7.5) ** 2 - RoadPiece.radius ** 2) ** 0.5
     return RoadPiece
     

@@ -9,7 +9,7 @@ class test(object):
     def __init__(self):
         self.road = Road()
         self.drivers = []
-        self.testTime = random.randint(1800, 3000)
+        self.testTime = random.randint(18000, 30000)
         self.inCar = 0
         self.receiveCar = 0
         self.crashCar = 0
@@ -92,20 +92,34 @@ class test(object):
             self.crashCar += 1
     
     def handleMove(self):
-        for item in self.drivers:
+        for item in self.drivers:            
             deltaS = item.car.velocity * 0.5 + 0.5 ** 3 * item.car.a
             item.journey += deltaS
+            item.car.velocity += item.car.a
+            if item.car.velocity < 0:
+                item.car.velocity = 0
+            item.car.a = 0
+            if item.crash:
+                continue
             tmpPos = item.pos[1] + deltaS
             tmpPiece = item.pos[0]
             if tmpPos >= item.pos[0].length:
                 try:
                     tmpPiece = self.road.piece[self.road.piece.index(item.pos[0]) + 1]
                     tmpPos = tmpPos - item.pos[0].length
+                    if tmpPiece.curve:
+                        item.viewRange = tmpPiece.viewRange
+                        if item.chaseRange > item.viewRange:
+                            item.chaseRange = item.viewRange
+                        if item.safeLine > item.viewRange:
+                            item.safeLine = item.viewRange
+                    else:
+                        item.viewRange = item.basicViewRange
+                        item.chaseRange = item.basicChaseRange
+                        item.safeLine = item.basicSafeLine
                 except IndexError:
                     print "error id: " + str(item._id)
-            item.pos = (tmpPiece, tmpPos, item.journey + deltaS, item.journey + deltaS)
-            item.car.velocity += item.car.a
-            item.car.a = 0
+            item.pos = (tmpPiece, tmpPos, item.journey + deltaS, item.journey + deltaS)            
     
     def handleSwitch(self):
         for item in self.drivers:
@@ -121,18 +135,21 @@ class test(object):
         length = len(self.drivers)
         for i in xrange(0, len(self.drivers) - 2):
             if self.drivers[i].journey >= self.drivers[i + 1].journey and self.drivers[i].FSA.nowStatus["lane"] == self.drivers[i + 1].FSA.nowStatus["lane"]:
-                self.drivers[i].crash = self.drivers[i+1].crash = True
+                self.drivers[i].crash = self.drivers[i+1].crash = True                
                 crashTime = abs(self.drivers[i].car.velocity - self.drivers[i + 1].car.velocity) * 360
+                self.drivers[i].car.velocity = self.drivers[i+1].car.velocity = (self.drivers[i].car.velocity + self.drivers[i+1].car.velocity) / 2
                 self.drivers[i].crashTime = max(self.drivers[i].crashTime, crashTime)
                 self.drivers[i+1].crashTime = max(self.drivers[i+1].crashTime, crashTime)
             elif self.drivers[i].journey >= self.drivers[i + 2].journey and self.drivers[i].FSA.nowStatus["lane"] == self.drivers[i + 2].FSA.nowStatus["lane"]:
-                self.drivers[i].crash = self.drivers[i+2].crash = True
+                self.drivers[i].crash = self.drivers[i+2].crash = True                
                 crashTime = abs(self.drivers[i].car.velocity - self.drivers[i + 2].car.velocity) * 360
+                self.drivers[i].car.velocity = self.drivers[i+2].car.velocity = (self.drivers[i].car.velocity + self.drivers[i+2].car.velocity) / 2
                 self.drivers[i].crashTime = max(self.drivers[i].crashTime, crashTime)
                 self.drivers[i+2].crashTime = max(self.drivers[i+2].crashTime, crashTime)
         if self.drivers[-2].journey >= self.drivers[-1].journey and self.drivers[-2].FSA.nowStatus["lane"] == self.drivers[-1].FSA.nowStatus["lane"]:
-            self.drivers[-2].crash = self.drivers[-1].crash = True
+            self.drivers[-2].crash = self.drivers[-1].crash = True            
             crashTime = abs(self.drivers[-2].car.velocity - self.drivers[-1].car.velocity) * 360
+            self.drivers[-2].car.velocity = self.drivers[-1].car.velocity = (self.drivers[-2].car.velocity + self.drivers[-1].car.velocity) / 2
             self.drivers[-2].crashTime = max(self.drivers[-2].crashTime, crashTime)
             self.drivers[-1].crashTime = max(self.drivers[-1].crashTime, crashTime)
     
