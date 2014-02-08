@@ -21,26 +21,26 @@ class driver(object):
         #self.pos = (road.piece[0], 0, -self.car.length, 0)
         self.journey = 0
         Probability = random.random()
-        if Probability < 0.65:
+        if Probability < 0.7:
             self.type = TYPE[0]
-        elif Probability < 0.8:
+        elif Probability < 0.5:
             self.type = TYPE[1]
-        elif Probability < 0.95:
+        elif Probability < 0.99:
             self.type = TYPE[2]
         else:
             self.type = TYPE[3]
         safeLineError = random.normalvariate(0, 1.5)
         if abs(safeLineError) > 1.2:
             safeLineError = safeLineError / abs(safeLineError) * 1.2
-        self.safeLine = 5 + safeLineError + delta[self.type][2]
+        self.safeLine = 9 + safeLineError + delta[self.type][2]
         reflectTimeError = random.normalvariate(0, 0.3)
         if abs(reflectTimeError) > 0.8:
             reflectTimeError = reflectTimeError / abs(reflectTimeError) * 0.8
-        self.reflectTime = 1.2 + reflectTimeError + delta[self.type][1]
+        self.reflectTime = 0.2 + reflectTimeError + delta[self.type][1]
         viewRangeError = random.normalvariate(0, 10)
         if abs(viewRangeError) > 40:
             viewRangeError = viewRangeError / abs(viewRangeError) * 40
-        self.viewRange = 160 + viewRangeError + delta[self.type][0]
+        self.viewRange = 260 + viewRangeError + delta[self.type][0]
         tmpHoldV = random.normalvariate(road.Vmin + (road.Vmax - road.Vmin) / 4 * 3, 5)
         if tmpHoldV < road.Vmin + (road.Vmax - road.Vmin) / 2:
             tmpHoldV = road.Vmin + (road.Vmax - road.Vmin) / 2

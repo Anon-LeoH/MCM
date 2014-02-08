@@ -13,7 +13,7 @@ class test(object):
         self.inCar = 0
         self.receiveCar = 0
         self.crashCar = 0
-        self.PoissonCoef = random.uniform(0.05, 0.34)
+        self.PoissonCoef = random.uniform(0.05, 0.40)
         self.inCarPro = 0
     
     def carIn(self):
