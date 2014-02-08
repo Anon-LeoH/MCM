@@ -17,7 +17,7 @@ def runTest(template_test,type_name):
         tmpTest1.finish()
         tmpTest1.calculateDensity()
         tmpTest1.makeDecision()
-    f1.write(type_name + " : " + str( {"car in": tmpTest1.inCar, "car out": tmpTest1.receiveCar, "crash times": tmpTest1.crashCar, "test time": tmpTest1.testTime, "road length": tmpTest1.road.length, "Vmin": tmpTest1.road.Vmin, "Vmax": tmpTest1.road.Vmax} ) + "\n")
+    f1.write(type_name + " : " + str( {"car in": tmpTest1.inCar, "car out": tmpTest1.receiveCar, "crash times": tmpTest1.crashCar, "test time": tmpTest1.testTime, "road length": tmpTest1.road.length, "Vmin": tmpTest1.road.Vmin, "Vmax": tmpTest1.road.Vmax, "frequency": tmpTest1.PoissonCoef} ) + "\n")
 
 for i in xrange(10):
     tmpTest = test()

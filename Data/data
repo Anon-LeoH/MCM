@@ -1,0 +1,3 @@
+RightHand : {'car in': 2197, 'frequency': 0.27117903410747596, 'Vmin': 16.666666666666668, 'test time': 8277, 'road length': 17051, 'crash times': 25, 'Vmax': 44.44444444444444, 'car out': 1915}
+NoRule : {'car in': 2231, 'frequency': 0.27117903410747596, 'Vmin': 16.666666666666668, 'test time': 8277, 'road length': 17051, 'crash times': 37, 'Vmax': 44.44444444444444, 'car out': 1916}
+
