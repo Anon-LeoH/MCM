@@ -18,8 +18,6 @@ class driver(object):
     def __init__(self, _id, road, type):
         self._id = _id
         self.road = road
-        #self.car = car()
-        #self.pos = (road.piece[0], 0, -self.car.length, 0)
         self.journey = 0
         
         Probability = random.random()

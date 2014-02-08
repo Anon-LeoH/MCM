@@ -20,7 +20,7 @@ class test(object):
     def carIn(self):
         length = len(self.drivers)
         tmpCar = driver(length, self.road, self.type)
-        #len -> length
+        
         if length != 0 and self.drivers[length-1].journey < tmpCar.safeLine:
             return False
         fl = fr = None
@@ -69,7 +69,6 @@ class test(object):
         if self.inCarPro <= self.PoissonCoef:
             self.carIn()
     
-    #self.length -> self.road.length
     def handleCarOut(self):
         removeList = []
         for item in self.drivers:
