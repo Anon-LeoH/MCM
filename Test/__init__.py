@@ -216,16 +216,21 @@ class test(object):
     
     def finish(self):
         self.drivers.sort(cmp=lambda x,y:cmp(x.journey, y.journey))
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+    
+    #calculateSafe for further use
+    def calculateSafe(self):
+        preCar = { "Left" : None , "Right" : None }
+        oneBig = 20
+        oneSmall = 5
+        for item in self.drivers:
+            lane = item.FSA.nowStatus["lane"]
+            if preCar[lane] == None:
+                item.safeLine = oneBig
+            else:
+                delv = item.car.velocity - preCar[lane].car.velocity
+                if delv > 0:
+                    item.safeLine = delv * 3
+                    #item.safeLine = oneBig
+                else:
+                    item.safeLine = oneSmall
+                preCar[lane] = item

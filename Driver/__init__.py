@@ -20,6 +20,7 @@ class driver(object):
         #self.car = car()
         #self.pos = (road.piece[0], 0, -self.car.length, 0)
         self.journey = 0
+        
         Probability = random.random()
         if Probability < 0.7:
             self.type = TYPE[0]

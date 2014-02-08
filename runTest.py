@@ -2,7 +2,7 @@ from Test import test
 
 f1 = open("Data/data", "w")
 
-for i in xrange(100):
+for i in xrange(10):
     tmpTest = test()
     time = 0
     for j in xrange(tmpTest.testTime):
@@ -13,9 +13,10 @@ for i in xrange(100):
         tmpTest.handleMove()
         tmpTest.handleCrash()
         tmpTest.finish()
+        tmpTest.calculateSafe()
         tmpTest.makeDecision()
         time += 1
-        print "time: " + str(time)
+        #print "time: " + str(time)
     while tmpTest.drivers != []:
         tmpTest.clearCrash()
         tmpTest.handleCarOut()
@@ -23,9 +24,10 @@ for i in xrange(100):
         tmpTest.handleMove()
         tmpTest.handleCrash()
         tmpTest.finish()
+        tmpTest.calculateSafe()
         tmpTest.makeDecision()
         time += 1
-        print "time last: " + str(time)
+        #print "time last: " + str(time)
     f1.write(str( {"car in": tmpTest.inCar, "car out": tmpTest.receiveCar, "crash times": tmpTest.crashCar, "put in time": tmpTest.testTime, "finish time": time, "road length": tmpTest.road.length} ) + "\n")
 
 f1.close()

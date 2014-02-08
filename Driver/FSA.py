@@ -1,3 +1,4 @@
+import random
 class driveFSA(object):
     def __init__(self, driver):
         self.driver = driver
@@ -50,6 +51,12 @@ class driveFSA(object):
         self.nowStatus["carBackRight"] = carBack[0]
         self.nowStatus["carInChaseLeft"] = carChase[1]
         self.nowStatus["carInChaseRight"] = carChase[0]
+        
+        #brakeforp
+        Probability = random.random()
+        if Probability < 0.02:
+            self.driver.car.a = random.normalvariate(1,self.driver.road.maxa)
+            return "braking!"
         
         if self.nowStatus["braking!"] >= self.driver.reflectTime:
             self.driver.car.a = self.driver.road.maxa
