@@ -58,7 +58,7 @@ class driveFSA(object):
         #brakeforp
         Probability = random.random()
         if Probability < (self.driver.density ** 0.5) * 0.5:
-            self.driver.car.a = random.normalvariate(1,self.driver.road.maxa)
+            self.driver.car.a = -random.normalvariate(1,self.driver.road.maxa)
             return "braking!"
         
         if self.nowStatus["braking!"] >= self.driver.reflectTime:
@@ -107,9 +107,3 @@ class driveFSA(object):
                     self.driver.car.a = -min(self.driver.car.velocity - self.nowStatus["carInView" + self.nowStatus["lane"]].velocity, self.driver.road.maxa)
         
         return "move"
-            
-        
-        
-        
-        
-        

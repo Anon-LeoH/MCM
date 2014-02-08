@@ -91,8 +91,11 @@ class test(object):
             self.crashCar += 1
     
     def handleMove(self):
+        widthOfCar = 2.5
         for item in self.drivers:            
             deltaS = item.car.velocity * 0.5 + 0.5 ** 3 * item.car.a
+            if item.option == "changeLane":
+                deltaS = (deltaS ** 2 - widthOfCar ** 2) ** 0.5
             item.journey += deltaS
             item.car.velocity += item.car.a
             if item.car.velocity < 0:
