@@ -3,6 +3,7 @@ sys.path.append('../')
 
 from Car import car
 from . import FSA
+from . import No_Rule_FSA
 import random
 
 TYPE = ["normal", "badSight", "old", "drunk"]
@@ -14,7 +15,7 @@ delta = {
         }
 
 class driver(object):
-    def __init__(self, _id, road):
+    def __init__(self, _id, road, type):
         self._id = _id
         self.road = road
         #self.car = car()
@@ -58,7 +59,10 @@ class driver(object):
             self.viewRange -= 40
             self.chaseRange -= 10
             self.safeLine += 1
-        self.FSA = FSA.driveFSA(self)
+        if type == "RightHand":
+            self.FSA = FSA.driveFSA(self)
+        else:
+            self.FSA = No_Rule_FSA.driveFSA(self)
         self.crashTime = 0
         self.crash = False
         self.option = "move"

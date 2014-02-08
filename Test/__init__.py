@@ -9,16 +9,17 @@ class test(object):
     def __init__(self):
         self.road = Road()
         self.drivers = []
-        self.testTime = random.randint(400, 1200)
+        self.testTime = random.randint(1800, 3000)
         self.inCar = 0
         self.receiveCar = 0
         self.crashCar = 0
-        self.PoissonCoef = random.uniform(0.05, 0.40)
+        self.PoissonCoef = random.uniform(0.05, 0.6)
         self.inCarPro = 0
+        self.type = "RightHand"
     
     def carIn(self):
         length = len(self.drivers)
-        tmpCar = driver(length, self.road)
+        tmpCar = driver(length, self.road, self.type)
         #len -> length
         if length != 0 and self.drivers[length-1].journey < tmpCar.safeLine:
             return False
