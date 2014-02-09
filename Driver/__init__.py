@@ -11,7 +11,7 @@ delta = {
             "normal": (0, 0, 1, 0),
             "badSight": (-30, 0, 2, 0),
             "old": (-30, 1, 2, 0),
-            "drunk": (-50, random.randint(2, 4), -1, 0.1)
+            "drunk": (-50, random.randint(1, 2), -1, 0.05)
         }
 
 class driver(object):
@@ -33,14 +33,14 @@ class driver(object):
         if abs(safeLineError) > 8:
             safeLineError = safeLineError / abs(safeLineError) * 8
         self.safeLine = self.basicSafeLine = 20 + safeLineError + delta[self.type][2]
-        reflectTimeError = random.normalvariate(0, 0.3)
-        if abs(reflectTimeError) > 0.8:
-            reflectTimeError = reflectTimeError / abs(reflectTimeError) * 0.8
-        self.reflectTime = 0.6 + reflectTimeError + delta[self.type][1]
+        reflectTimeError = random.normalvariate(0, 0.1)
+        if abs(reflectTimeError) > 0.6:
+            reflectTimeError = reflectTimeError / abs(reflectTimeError) * 0.6
+        self.reflectTime = 0.4 + reflectTimeError + delta[self.type][1]
         viewRangeError = random.normalvariate(0, 10)
         if abs(viewRangeError) > 40:
             viewRangeError = viewRangeError / abs(viewRangeError) * 40
-        self.viewRange = self.basicViewRange = 250 + viewRangeError + delta[self.type][0]
+        self.viewRange = self.basicViewRange = 300 + viewRangeError + delta[self.type][0]
         tmpHoldV = random.normalvariate(road.Vmin + (road.Vmax - road.Vmin) / 3, 8)
         if tmpHoldV < road.Vmin:
             tmpHoldV = road.Vmin
@@ -68,7 +68,7 @@ class driver(object):
             self.FSA = FSA.driveFSA(self)
         else:
             self.FSA = No_Rule_FSA.driveFSA(self)
-        self.trance = 0.05 + delta[self.type][3]
+        self.trance = 0.005 + delta[self.type][3]
         self.crashTime = 0
         self.crash = False
         self.option = "move"

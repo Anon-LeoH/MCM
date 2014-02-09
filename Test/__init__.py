@@ -9,11 +9,11 @@ class test(object):
     def __init__(self):
         self.road = Road()
         self.drivers = []
-        self.testTime = random.randint(6000, 9000)
+        self.testTime = random.randint(1800, 3000)
         self.inCar = 0
         self.receiveCar = 0
         self.crashCar = 0
-        self.PoissonCoef = random.uniform(0.05, 0.6)
+        self.PoissonCoef = random.uniform(0.05, 0.99)
         self.inCarPro = 0
         self.type = "RightHand"
     
@@ -93,11 +93,11 @@ class test(object):
     def handleMove(self):
         widthOfCar = 2.5
         for item in self.drivers:            
-            deltaS = item.car.velocity * 0.5 + 0.5 ** 3 * item.car.a
+            deltaS = item.car.velocity + 0.5 * item.car.a
             item.journey += deltaS
             if item.option == "changeLane":
                 deltaS = (deltaS ** 2 - widthOfCar ** 2) ** 0.5
-            item.car.velocity += item.car.a * 0.5
+            item.car.velocity += item.car.a
             if item.car.velocity > item.maxV:
                 item.car.velocity = item.maxV
             if item.car.velocity < 0:

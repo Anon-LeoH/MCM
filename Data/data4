@@ -1,0 +1,6 @@
+RightHand : {'car in': 1749, 'frequency': 0.4467872239891774, 'Vmin': 16.666666666666668, 'test time': 4031, 'road length': 45113, 'crash times': 21, 'Vmax': 44.44444444444444, 'car out': 1170}
+NoRule : {'car in': 1823, 'frequency': 0.4467872239891774, 'Vmin': 16.666666666666668, 'test time': 4031, 'road length': 45113, 'crash times': 22, 'Vmax': 44.44444444444444, 'car out': 1208}
+
+RightHand : {'car in': 1737, 'frequency': 0.4213768066683097, 'Vmin': 11.11111111111111, 'test time': 4328, 'road length': 6805, 'crash times': 56, 'Vmax': 22.22222222222222, 'car out': 1548}
+NoRule : {'car in': 1829, 'frequency': 0.4213768066683097, 'Vmin': 11.11111111111111, 'test time': 4328, 'road length': 6805, 'crash times': 71, 'Vmax': 22.22222222222222, 'car out': 1605}
+

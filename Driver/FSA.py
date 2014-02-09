@@ -84,7 +84,10 @@ class driveFSA(object):
         
         if not self.nowStatus["pos"][0].curve:
             if self.nowStatus["carInView" + self.nowStatus["lane"]] == None:
-                self.driver.car.a = min(self.driver.maxV - self.driver.car.velocity, self.driver.road.maxa)
+                if self.nowStatus["lane"] == "Right":
+                    self.driver.car.a = min(self.driver.maxV - self.driver.car.velocity, self.driver.road.maxa)
+                else:
+                    self.driver.car.a = min(self.driver.road.Vmax - self.driver.car.velocity, self.driver.road.maxa)
             elif self.driver.car.velocity > self.driver.holdV:
                 self.driver.car.a = -min(self.driver.car.velocity - self.driver.holdV, self.driver.road.maxa)
             else:
