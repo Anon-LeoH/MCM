@@ -9,7 +9,7 @@ class test(object):
     def __init__(self):
         self.road = Road()
         self.drivers = []
-        self.testTime = random.randint(1800, 3000)
+        self.testTime = random.randint(3600, 6000)
         self.inCar = 0
         self.receiveCar = 0
         self.crashCar = 0

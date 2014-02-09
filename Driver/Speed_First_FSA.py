@@ -23,17 +23,18 @@ class driveFSA(object):
         self.nowStatus["carInSafeLineRight"] = carInSafeLine[0]
         if self.nowStatus["carInSafeLineRight"] == None:
             self.nowStatus["lane"] = "Right"
-            if self.nowStatus["carInViewRight"] != None:
-        elif self.nowStatus["carInSafeLineRight"].velocity >= self.driver.holdV:
-            self.nowStatus["lane"] = "Right"
         elif self.nowStatus["carInSafeLineLeft"] == None:
             self.nowStatus["lane"] = "Left"
-            if self.nowStatus["carInViewLeft"] != None:
+        elif self.nowStatus["carInSafeLineRight"].velocity >= self.driver.holdV:
+            self.nowStatus["lane"] = "Right"
         elif self.nowStatus["carInSafeLineLeft"].velocity >= self.driver.holdV:
             self.nowStatus["lane"] = "Left"
-        else:
+        elif self.nowStatus["carInSafeLineRight"].velocity > self.nowStatus["carInSafeLineLeft"].velocity:
             self.driver.car.velocity = self.nowStatus["carInSafeLineRight"].velocity
             self.nowStatus["lane"] = "Right"
+        else:
+            self.driver.car.velocity = self.nowStatus["carInSafeLineLeft"].velocity
+            self.nowStatus["lane"] = "Left"
     
     def judge(self, carInView, carInSafeLine, carBack, carChase):
         if self.driver.crash:
@@ -73,39 +74,18 @@ class driveFSA(object):
             self.driver.car.a = 0
             return "move"
         
-        if self.driver.car.velocity < self.driver.holdV:
-            self.driver.car.a = min(self.driver.holdV - self.driver.car.velocity, self.driver.road.maxa)
-        
-        if not self.nowStatus["pos"][0].curve:
-            if self.nowStatus["carInView" + self.nowStatus["lane"]] == None:
-                if self.nowStatus["lane"] == "Right":
-                    self.driver.car.a = min(self.driver.maxV - self.driver.car.velocity, self.driver.road.maxa)
-                else:
-                    self.driver.car.a = min(self.driver.road.Vmax - self.driver.car.velocity, self.driver.road.maxa)
-            elif self.driver.car.velocity > self.driver.holdV:
-                self.driver.car.a = -min(self.driver.car.velocity - self.driver.holdV, self.driver.road.maxa)
-            else:
-                self.driver.car.a = min(self.driver.holdV - self.driver.car.velocity, self.driver.road.maxa)
-            if self.nowStatus["lane"] == "Right":
+        self.driver.car.a = min(self.driver.maxV - self.driver.car.velocity, self.driver.road.maxa)
+
+        if self.nowStatus["lane"] == "Right":
                 if self.nowStatus["carInChaseRight"] != None:
                     if self.nowStatus["carInSafeLineLeft"] == None and self.nowStatus["carBackLeft"] == None:
                         self.driver.car.a = 0
                         return "changeLane"
-                    else:
-                        self.driver.car.a = -min(self.driver.car.velocity - self.nowStatus["carInChase" + self.nowStatus["lane"]].velocity, self.driver.road.maxa)
-            else:
-                if self.nowStatus["carInChaseRight"] == None and self.nowStatus["carBackRight"] == None:
-                    self.driver.car.a = 0
-                    return "changeLane"
-                else:
-                    self.driver.car.a = -min(self.driver.car.velocity - self.nowStatus["carInChase" + self.nowStatus["lane"]].velocity, self.driver.road.maxa)
-        else:
-            if self.driver.car.velocity > self.driver.holdV:
-                self.driver.car.a = -min(self.driver.car.velocity - self.driver.holdV, self.driver.road.maxa)
-            elif self.driver.car.velocity < self.driver.holdV:
-                self.driver.car.a = min(self.driver.holdV - self.driver.car.velocity, self.driver.road.maxa)
-            if self.nowStatus["carInView" + self.nowStatus["lane"]] != None:
-                if self.driver.car.velocity > self.nowStatus["carInView" + self.nowStatus["lane"]].velocity:
-                    self.driver.car.a = -min(self.driver.car.velocity - self.nowStatus["carInView" + self.nowStatus["lane"]].velocity, self.driver.road.maxa)
         
+        if self.nowStatus["lane"] == "Left":
+                if self.nowStatus["carInChaseLeft"] != None:
+                    if self.nowStatus["carInSafeLineRight"] == None and self.nowStatus["carBackRight"] == None:
+                        self.driver.car.a = 0
+                        return "changeLane"
+            
         return "move"

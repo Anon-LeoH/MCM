@@ -1,0 +1,300 @@
+RightHand : {'car in': 1027, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2817, 'road length': 12710, 'crash times': 31, 'Vmax': 44.44444444444444, 'car out': 878}
+NoRule : {'car in': 1058, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2817, 'road length': 12710, 'crash times': 35, 'Vmax': 44.44444444444444, 'car out': 900}
+
+RightHand : {'car in': 1036, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2648, 'road length': 12710, 'crash times': 36, 'Vmax': 44.44444444444444, 'car out': 867}
+NoRule : {'car in': 1024, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2648, 'road length': 12710, 'crash times': 33, 'Vmax': 44.44444444444444, 'car out': 847}
+
+RightHand : {'car in': 950, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2537, 'road length': 12710, 'crash times': 30, 'Vmax': 44.44444444444444, 'car out': 788}
+NoRule : {'car in': 961, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2537, 'road length': 12710, 'crash times': 26, 'Vmax': 44.44444444444444, 'car out': 806}
+
+RightHand : {'car in': 864, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2288, 'road length': 12710, 'crash times': 38, 'Vmax': 44.44444444444444, 'car out': 699}
+NoRule : {'car in': 880, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2288, 'road length': 12710, 'crash times': 27, 'Vmax': 44.44444444444444, 'car out': 714}
+
+RightHand : {'car in': 983, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2493, 'road length': 12710, 'crash times': 38, 'Vmax': 44.44444444444444, 'car out': 801}
+NoRule : {'car in': 942, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2493, 'road length': 12710, 'crash times': 36, 'Vmax': 44.44444444444444, 'car out': 781}
+
+RightHand : {'car in': 943, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2394, 'road length': 12710, 'crash times': 14, 'Vmax': 44.44444444444444, 'car out': 785}
+NoRule : {'car in': 924, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2394, 'road length': 12710, 'crash times': 40, 'Vmax': 44.44444444444444, 'car out': 737}
+
+RightHand : {'car in': 988, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2632, 'road length': 12710, 'crash times': 39, 'Vmax': 44.44444444444444, 'car out': 817}
+NoRule : {'car in': 1032, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2632, 'road length': 12710, 'crash times': 35, 'Vmax': 44.44444444444444, 'car out': 861}
+
+RightHand : {'car in': 683, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1811, 'road length': 12710, 'crash times': 14, 'Vmax': 44.44444444444444, 'car out': 539}
+NoRule : {'car in': 683, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1811, 'road length': 12710, 'crash times': 27, 'Vmax': 44.44444444444444, 'car out': 524}
+
+RightHand : {'car in': 873, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2337, 'road length': 12710, 'crash times': 36, 'Vmax': 44.44444444444444, 'car out': 694}
+NoRule : {'car in': 896, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2337, 'road length': 12710, 'crash times': 17, 'Vmax': 44.44444444444444, 'car out': 725}
+
+RightHand : {'car in': 1017, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2742, 'road length': 12710, 'crash times': 34, 'Vmax': 44.44444444444444, 'car out': 849}
+NoRule : {'car in': 1094, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2742, 'road length': 12710, 'crash times': 40, 'Vmax': 44.44444444444444, 'car out': 894}
+
+RightHand : {'car in': 1077, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2869, 'road length': 12710, 'crash times': 41, 'Vmax': 44.44444444444444, 'car out': 915}
+NoRule : {'car in': 1053, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2869, 'road length': 12710, 'crash times': 32, 'Vmax': 44.44444444444444, 'car out': 894}
+
+RightHand : {'car in': 896, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2362, 'road length': 12710, 'crash times': 34, 'Vmax': 44.44444444444444, 'car out': 738}
+NoRule : {'car in': 885, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2362, 'road length': 12710, 'crash times': 19, 'Vmax': 44.44444444444444, 'car out': 717}
+
+RightHand : {'car in': 797, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2124, 'road length': 12710, 'crash times': 20, 'Vmax': 44.44444444444444, 'car out': 646}
+NoRule : {'car in': 812, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2124, 'road length': 12710, 'crash times': 27, 'Vmax': 44.44444444444444, 'car out': 656}
+
+RightHand : {'car in': 1040, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2670, 'road length': 12710, 'crash times': 40, 'Vmax': 44.44444444444444, 'car out': 856}
+NoRule : {'car in': 1002, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2670, 'road length': 12710, 'crash times': 54, 'Vmax': 44.44444444444444, 'car out': 818}
+
+RightHand : {'car in': 1067, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2870, 'road length': 12710, 'crash times': 33, 'Vmax': 44.44444444444444, 'car out': 906}
+NoRule : {'car in': 1061, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2870, 'road length': 12710, 'crash times': 42, 'Vmax': 44.44444444444444, 'car out': 900}
+
+RightHand : {'car in': 1036, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2833, 'road length': 12710, 'crash times': 30, 'Vmax': 44.44444444444444, 'car out': 892}
+NoRule : {'car in': 1052, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2833, 'road length': 12710, 'crash times': 39, 'Vmax': 44.44444444444444, 'car out': 886}
+
+RightHand : {'car in': 984, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2530, 'road length': 12710, 'crash times': 44, 'Vmax': 44.44444444444444, 'car out': 807}
+NoRule : {'car in': 963, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2530, 'road length': 12710, 'crash times': 38, 'Vmax': 44.44444444444444, 'car out': 786}
+
+RightHand : {'car in': 1049, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2663, 'road length': 12710, 'crash times': 37, 'Vmax': 44.44444444444444, 'car out': 886}
+NoRule : {'car in': 1046, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2663, 'road length': 12710, 'crash times': 46, 'Vmax': 44.44444444444444, 'car out': 870}
+
+RightHand : {'car in': 730, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2070, 'road length': 12710, 'crash times': 44, 'Vmax': 44.44444444444444, 'car out': 554}
+NoRule : {'car in': 777, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2070, 'road length': 12710, 'crash times': 21, 'Vmax': 44.44444444444444, 'car out': 623}
+
+RightHand : {'car in': 744, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1935, 'road length': 12710, 'crash times': 21, 'Vmax': 44.44444444444444, 'car out': 585}
+NoRule : {'car in': 721, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1935, 'road length': 12710, 'crash times': 26, 'Vmax': 44.44444444444444, 'car out': 552}
+
+RightHand : {'car in': 1032, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2679, 'road length': 12710, 'crash times': 45, 'Vmax': 44.44444444444444, 'car out': 849}
+NoRule : {'car in': 1016, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2679, 'road length': 12710, 'crash times': 56, 'Vmax': 44.44444444444444, 'car out': 840}
+
+RightHand : {'car in': 832, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2193, 'road length': 12710, 'crash times': 25, 'Vmax': 44.44444444444444, 'car out': 688}
+NoRule : {'car in': 847, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2193, 'road length': 12710, 'crash times': 26, 'Vmax': 44.44444444444444, 'car out': 701}
+
+RightHand : {'car in': 756, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1951, 'road length': 12710, 'crash times': 23, 'Vmax': 44.44444444444444, 'car out': 603}
+NoRule : {'car in': 737, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1951, 'road length': 12710, 'crash times': 20, 'Vmax': 44.44444444444444, 'car out': 592}
+
+RightHand : {'car in': 1034, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2694, 'road length': 12710, 'crash times': 30, 'Vmax': 44.44444444444444, 'car out': 874}
+NoRule : {'car in': 1020, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2694, 'road length': 12710, 'crash times': 33, 'Vmax': 44.44444444444444, 'car out': 864}
+
+RightHand : {'car in': 868, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2252, 'road length': 12710, 'crash times': 33, 'Vmax': 44.44444444444444, 'car out': 683}
+NoRule : {'car in': 856, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2252, 'road length': 12710, 'crash times': 21, 'Vmax': 44.44444444444444, 'car out': 703}
+
+RightHand : {'car in': 1047, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2723, 'road length': 12710, 'crash times': 31, 'Vmax': 44.44444444444444, 'car out': 882}
+NoRule : {'car in': 1027, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2723, 'road length': 12710, 'crash times': 40, 'Vmax': 44.44444444444444, 'car out': 856}
+
+RightHand : {'car in': 737, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1903, 'road length': 12710, 'crash times': 22, 'Vmax': 44.44444444444444, 'car out': 566}
+NoRule : {'car in': 718, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1903, 'road length': 12710, 'crash times': 23, 'Vmax': 44.44444444444444, 'car out': 560}
+
+RightHand : {'car in': 975, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2499, 'road length': 12710, 'crash times': 46, 'Vmax': 44.44444444444444, 'car out': 790}
+NoRule : {'car in': 983, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2499, 'road length': 12710, 'crash times': 35, 'Vmax': 44.44444444444444, 'car out': 806}
+
+RightHand : {'car in': 860, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2247, 'road length': 12710, 'crash times': 22, 'Vmax': 44.44444444444444, 'car out': 725}
+NoRule : {'car in': 853, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2247, 'road length': 12710, 'crash times': 31, 'Vmax': 44.44444444444444, 'car out': 696}
+
+RightHand : {'car in': 791, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2122, 'road length': 12710, 'crash times': 26, 'Vmax': 44.44444444444444, 'car out': 633}
+NoRule : {'car in': 851, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2122, 'road length': 12710, 'crash times': 36, 'Vmax': 44.44444444444444, 'car out': 683}
+
+RightHand : {'car in': 725, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1897, 'road length': 12710, 'crash times': 25, 'Vmax': 44.44444444444444, 'car out': 571}
+NoRule : {'car in': 732, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1897, 'road length': 12710, 'crash times': 25, 'Vmax': 44.44444444444444, 'car out': 573}
+
+RightHand : {'car in': 1010, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2626, 'road length': 12710, 'crash times': 25, 'Vmax': 44.44444444444444, 'car out': 854}
+NoRule : {'car in': 983, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2626, 'road length': 12710, 'crash times': 37, 'Vmax': 44.44444444444444, 'car out': 812}
+
+RightHand : {'car in': 830, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2238, 'road length': 12710, 'crash times': 33, 'Vmax': 44.44444444444444, 'car out': 679}
+NoRule : {'car in': 876, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2238, 'road length': 12710, 'crash times': 31, 'Vmax': 44.44444444444444, 'car out': 716}
+
+RightHand : {'car in': 832, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2175, 'road length': 12710, 'crash times': 30, 'Vmax': 44.44444444444444, 'car out': 664}
+NoRule : {'car in': 889, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2175, 'road length': 12710, 'crash times': 27, 'Vmax': 44.44444444444444, 'car out': 717}
+
+RightHand : {'car in': 806, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2034, 'road length': 12710, 'crash times': 32, 'Vmax': 44.44444444444444, 'car out': 642}
+NoRule : {'car in': 762, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2034, 'road length': 12710, 'crash times': 24, 'Vmax': 44.44444444444444, 'car out': 612}
+
+RightHand : {'car in': 1041, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2720, 'road length': 12710, 'crash times': 60, 'Vmax': 44.44444444444444, 'car out': 852}
+NoRule : {'car in': 1029, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2720, 'road length': 12710, 'crash times': 38, 'Vmax': 44.44444444444444, 'car out': 844}
+
+RightHand : {'car in': 1038, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2793, 'road length': 12710, 'crash times': 34, 'Vmax': 44.44444444444444, 'car out': 864}
+NoRule : {'car in': 1069, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2793, 'road length': 12710, 'crash times': 25, 'Vmax': 44.44444444444444, 'car out': 898}
+
+RightHand : {'car in': 967, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2616, 'road length': 12710, 'crash times': 19, 'Vmax': 44.44444444444444, 'car out': 807}
+NoRule : {'car in': 1007, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2616, 'road length': 12710, 'crash times': 43, 'Vmax': 44.44444444444444, 'car out': 834}
+
+RightHand : {'car in': 699, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1898, 'road length': 12710, 'crash times': 24, 'Vmax': 44.44444444444444, 'car out': 554}
+NoRule : {'car in': 712, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1898, 'road length': 12710, 'crash times': 34, 'Vmax': 44.44444444444444, 'car out': 556}
+
+RightHand : {'car in': 974, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2573, 'road length': 12710, 'crash times': 39, 'Vmax': 44.44444444444444, 'car out': 793}
+NoRule : {'car in': 977, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2573, 'road length': 12710, 'crash times': 18, 'Vmax': 44.44444444444444, 'car out': 817}
+
+RightHand : {'car in': 913, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2397, 'road length': 12710, 'crash times': 22, 'Vmax': 44.44444444444444, 'car out': 743}
+NoRule : {'car in': 953, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2397, 'road length': 12710, 'crash times': 49, 'Vmax': 44.44444444444444, 'car out': 775}
+
+RightHand : {'car in': 1116, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2888, 'road length': 12710, 'crash times': 37, 'Vmax': 44.44444444444444, 'car out': 945}
+NoRule : {'car in': 1125, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2888, 'road length': 12710, 'crash times': 50, 'Vmax': 44.44444444444444, 'car out': 948}
+
+RightHand : {'car in': 1053, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2808, 'road length': 12710, 'crash times': 32, 'Vmax': 44.44444444444444, 'car out': 891}
+NoRule : {'car in': 1055, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2808, 'road length': 12710, 'crash times': 23, 'Vmax': 44.44444444444444, 'car out': 903}
+
+RightHand : {'car in': 827, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2211, 'road length': 12710, 'crash times': 24, 'Vmax': 44.44444444444444, 'car out': 676}
+NoRule : {'car in': 840, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2211, 'road length': 12710, 'crash times': 34, 'Vmax': 44.44444444444444, 'car out': 675}
+
+RightHand : {'car in': 877, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2303, 'road length': 12710, 'crash times': 35, 'Vmax': 44.44444444444444, 'car out': 706}
+NoRule : {'car in': 887, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2303, 'road length': 12710, 'crash times': 28, 'Vmax': 44.44444444444444, 'car out': 720}
+
+RightHand : {'car in': 884, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2249, 'road length': 12710, 'crash times': 37, 'Vmax': 44.44444444444444, 'car out': 712}
+NoRule : {'car in': 844, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2249, 'road length': 12710, 'crash times': 37, 'Vmax': 44.44444444444444, 'car out': 697}
+
+RightHand : {'car in': 1105, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2807, 'road length': 12710, 'crash times': 36, 'Vmax': 44.44444444444444, 'car out': 919}
+NoRule : {'car in': 1077, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2807, 'road length': 12710, 'crash times': 41, 'Vmax': 44.44444444444444, 'car out': 896}
+
+RightHand : {'car in': 1142, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2974, 'road length': 12710, 'crash times': 41, 'Vmax': 44.44444444444444, 'car out': 964}
+NoRule : {'car in': 1103, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2974, 'road length': 12710, 'crash times': 50, 'Vmax': 44.44444444444444, 'car out': 915}
+
+RightHand : {'car in': 686, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1862, 'road length': 12710, 'crash times': 29, 'Vmax': 44.44444444444444, 'car out': 535}
+NoRule : {'car in': 716, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1862, 'road length': 12710, 'crash times': 39, 'Vmax': 44.44444444444444, 'car out': 549}
+
+RightHand : {'car in': 863, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2276, 'road length': 12710, 'crash times': 22, 'Vmax': 44.44444444444444, 'car out': 711}
+NoRule : {'car in': 882, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2276, 'road length': 12710, 'crash times': 29, 'Vmax': 44.44444444444444, 'car out': 721}
+
+RightHand : {'car in': 794, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2070, 'road length': 12710, 'crash times': 41, 'Vmax': 44.44444444444444, 'car out': 616}
+NoRule : {'car in': 794, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2070, 'road length': 12710, 'crash times': 20, 'Vmax': 44.44444444444444, 'car out': 639}
+
+RightHand : {'car in': 913, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2390, 'road length': 12710, 'crash times': 27, 'Vmax': 44.44444444444444, 'car out': 750}
+NoRule : {'car in': 949, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2390, 'road length': 12710, 'crash times': 45, 'Vmax': 44.44444444444444, 'car out': 776}
+
+RightHand : {'car in': 958, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2434, 'road length': 12710, 'crash times': 26, 'Vmax': 44.44444444444444, 'car out': 796}
+NoRule : {'car in': 866, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2434, 'road length': 12710, 'crash times': 22, 'Vmax': 44.44444444444444, 'car out': 727}
+
+RightHand : {'car in': 750, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1987, 'road length': 12710, 'crash times': 15, 'Vmax': 44.44444444444444, 'car out': 604}
+NoRule : {'car in': 750, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1987, 'road length': 12710, 'crash times': 24, 'Vmax': 44.44444444444444, 'car out': 599}
+
+RightHand : {'car in': 1069, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2888, 'road length': 12710, 'crash times': 49, 'Vmax': 44.44444444444444, 'car out': 898}
+NoRule : {'car in': 1097, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2888, 'road length': 12710, 'crash times': 40, 'Vmax': 44.44444444444444, 'car out': 922}
+
+RightHand : {'car in': 833, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2281, 'road length': 12710, 'crash times': 16, 'Vmax': 44.44444444444444, 'car out': 682}
+NoRule : {'car in': 863, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2281, 'road length': 12710, 'crash times': 17, 'Vmax': 44.44444444444444, 'car out': 726}
+
+RightHand : {'car in': 746, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1867, 'road length': 12710, 'crash times': 24, 'Vmax': 44.44444444444444, 'car out': 583}
+NoRule : {'car in': 729, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1867, 'road length': 12710, 'crash times': 22, 'Vmax': 44.44444444444444, 'car out': 559}
+
+RightHand : {'car in': 889, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2349, 'road length': 12710, 'crash times': 27, 'Vmax': 44.44444444444444, 'car out': 721}
+NoRule : {'car in': 891, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2349, 'road length': 12710, 'crash times': 30, 'Vmax': 44.44444444444444, 'car out': 725}
+
+RightHand : {'car in': 1065, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2742, 'road length': 12710, 'crash times': 28, 'Vmax': 44.44444444444444, 'car out': 898}
+NoRule : {'car in': 1025, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2742, 'road length': 12710, 'crash times': 16, 'Vmax': 44.44444444444444, 'car out': 872}
+
+RightHand : {'car in': 1056, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2746, 'road length': 12710, 'crash times': 41, 'Vmax': 44.44444444444444, 'car out': 852}
+NoRule : {'car in': 1027, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2746, 'road length': 12710, 'crash times': 42, 'Vmax': 44.44444444444444, 'car out': 859}
+
+RightHand : {'car in': 705, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1814, 'road length': 12710, 'crash times': 31, 'Vmax': 44.44444444444444, 'car out': 529}
+NoRule : {'car in': 657, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1814, 'road length': 12710, 'crash times': 14, 'Vmax': 44.44444444444444, 'car out': 519}
+
+RightHand : {'car in': 1033, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2800, 'road length': 12710, 'crash times': 43, 'Vmax': 44.44444444444444, 'car out': 846}
+NoRule : {'car in': 1046, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2800, 'road length': 12710, 'crash times': 55, 'Vmax': 44.44444444444444, 'car out': 867}
+
+RightHand : {'car in': 1007, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2571, 'road length': 12710, 'crash times': 28, 'Vmax': 44.44444444444444, 'car out': 838}
+NoRule : {'car in': 915, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2571, 'road length': 12710, 'crash times': 39, 'Vmax': 44.44444444444444, 'car out': 744}
+
+RightHand : {'car in': 954, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2508, 'road length': 12710, 'crash times': 37, 'Vmax': 44.44444444444444, 'car out': 789}
+NoRule : {'car in': 913, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2508, 'road length': 12710, 'crash times': 38, 'Vmax': 44.44444444444444, 'car out': 759}
+
+RightHand : {'car in': 727, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1982, 'road length': 12710, 'crash times': 22, 'Vmax': 44.44444444444444, 'car out': 574}
+NoRule : {'car in': 741, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1982, 'road length': 12710, 'crash times': 37, 'Vmax': 44.44444444444444, 'car out': 577}
+
+RightHand : {'car in': 1061, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2764, 'road length': 12710, 'crash times': 24, 'Vmax': 44.44444444444444, 'car out': 917}
+NoRule : {'car in': 1049, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2764, 'road length': 12710, 'crash times': 34, 'Vmax': 44.44444444444444, 'car out': 898}
+
+RightHand : {'car in': 1018, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2714, 'road length': 12710, 'crash times': 28, 'Vmax': 44.44444444444444, 'car out': 866}
+NoRule : {'car in': 1029, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2714, 'road length': 12710, 'crash times': 33, 'Vmax': 44.44444444444444, 'car out': 856}
+
+RightHand : {'car in': 894, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2281, 'road length': 12710, 'crash times': 41, 'Vmax': 44.44444444444444, 'car out': 726}
+NoRule : {'car in': 895, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2281, 'road length': 12710, 'crash times': 31, 'Vmax': 44.44444444444444, 'car out': 736}
+
+RightHand : {'car in': 1006, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2677, 'road length': 12710, 'crash times': 47, 'Vmax': 44.44444444444444, 'car out': 828}
+NoRule : {'car in': 1027, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2677, 'road length': 12710, 'crash times': 30, 'Vmax': 44.44444444444444, 'car out': 859}
+
+RightHand : {'car in': 909, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2445, 'road length': 12710, 'crash times': 38, 'Vmax': 44.44444444444444, 'car out': 744}
+NoRule : {'car in': 948, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2445, 'road length': 12710, 'crash times': 38, 'Vmax': 44.44444444444444, 'car out': 782}
+
+RightHand : {'car in': 684, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1877, 'road length': 12710, 'crash times': 16, 'Vmax': 44.44444444444444, 'car out': 531}
+NoRule : {'car in': 769, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1877, 'road length': 12710, 'crash times': 22, 'Vmax': 44.44444444444444, 'car out': 615}
+
+RightHand : {'car in': 986, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2554, 'road length': 12710, 'crash times': 43, 'Vmax': 44.44444444444444, 'car out': 802}
+NoRule : {'car in': 970, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2554, 'road length': 12710, 'crash times': 27, 'Vmax': 44.44444444444444, 'car out': 823}
+
+RightHand : {'car in': 721, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1961, 'road length': 12710, 'crash times': 26, 'Vmax': 44.44444444444444, 'car out': 583}
+NoRule : {'car in': 713, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1961, 'road length': 12710, 'crash times': 19, 'Vmax': 44.44444444444444, 'car out': 564}
+
+RightHand : {'car in': 1051, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2745, 'road length': 12710, 'crash times': 34, 'Vmax': 44.44444444444444, 'car out': 888}
+NoRule : {'car in': 1014, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2745, 'road length': 12710, 'crash times': 23, 'Vmax': 44.44444444444444, 'car out': 852}
+
+RightHand : {'car in': 1034, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2876, 'road length': 12710, 'crash times': 44, 'Vmax': 44.44444444444444, 'car out': 868}
+NoRule : {'car in': 1103, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2876, 'road length': 12710, 'crash times': 26, 'Vmax': 44.44444444444444, 'car out': 927}
+
+RightHand : {'car in': 1033, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2784, 'road length': 12710, 'crash times': 40, 'Vmax': 44.44444444444444, 'car out': 874}
+NoRule : {'car in': 1092, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2784, 'road length': 12710, 'crash times': 28, 'Vmax': 44.44444444444444, 'car out': 940}
+
+RightHand : {'car in': 1014, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2681, 'road length': 12710, 'crash times': 33, 'Vmax': 44.44444444444444, 'car out': 831}
+NoRule : {'car in': 994, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2681, 'road length': 12710, 'crash times': 38, 'Vmax': 44.44444444444444, 'car out': 830}
+
+RightHand : {'car in': 789, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2000, 'road length': 12710, 'crash times': 20, 'Vmax': 44.44444444444444, 'car out': 637}
+NoRule : {'car in': 738, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2000, 'road length': 12710, 'crash times': 28, 'Vmax': 44.44444444444444, 'car out': 581}
+
+RightHand : {'car in': 1042, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2687, 'road length': 12710, 'crash times': 32, 'Vmax': 44.44444444444444, 'car out': 878}
+NoRule : {'car in': 1005, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2687, 'road length': 12710, 'crash times': 30, 'Vmax': 44.44444444444444, 'car out': 827}
+
+RightHand : {'car in': 826, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2122, 'road length': 12710, 'crash times': 25, 'Vmax': 44.44444444444444, 'car out': 672}
+NoRule : {'car in': 809, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2122, 'road length': 12710, 'crash times': 28, 'Vmax': 44.44444444444444, 'car out': 653}
+
+RightHand : {'car in': 1076, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2764, 'road length': 12710, 'crash times': 50, 'Vmax': 44.44444444444444, 'car out': 887}
+NoRule : {'car in': 1060, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2764, 'road length': 12710, 'crash times': 41, 'Vmax': 44.44444444444444, 'car out': 888}
+
+RightHand : {'car in': 652, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1879, 'road length': 12710, 'crash times': 19, 'Vmax': 44.44444444444444, 'car out': 510}
+NoRule : {'car in': 675, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1879, 'road length': 12710, 'crash times': 21, 'Vmax': 44.44444444444444, 'car out': 543}
+
+RightHand : {'car in': 755, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2011, 'road length': 12710, 'crash times': 25, 'Vmax': 44.44444444444444, 'car out': 606}
+NoRule : {'car in': 792, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2011, 'road length': 12710, 'crash times': 39, 'Vmax': 44.44444444444444, 'car out': 621}
+
+RightHand : {'car in': 968, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2576, 'road length': 12710, 'crash times': 40, 'Vmax': 44.44444444444444, 'car out': 801}
+NoRule : {'car in': 960, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2576, 'road length': 12710, 'crash times': 33, 'Vmax': 44.44444444444444, 'car out': 799}
+
+RightHand : {'car in': 964, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2471, 'road length': 12710, 'crash times': 42, 'Vmax': 44.44444444444444, 'car out': 793}
+NoRule : {'car in': 992, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2471, 'road length': 12710, 'crash times': 60, 'Vmax': 44.44444444444444, 'car out': 806}
+
+RightHand : {'car in': 873, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2344, 'road length': 12710, 'crash times': 31, 'Vmax': 44.44444444444444, 'car out': 720}
+NoRule : {'car in': 937, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2344, 'road length': 12710, 'crash times': 36, 'Vmax': 44.44444444444444, 'car out': 762}
+
+RightHand : {'car in': 1066, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2644, 'road length': 12710, 'crash times': 40, 'Vmax': 44.44444444444444, 'car out': 887}
+NoRule : {'car in': 1044, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2644, 'road length': 12710, 'crash times': 42, 'Vmax': 44.44444444444444, 'car out': 863}
+
+RightHand : {'car in': 966, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2515, 'road length': 12710, 'crash times': 31, 'Vmax': 44.44444444444444, 'car out': 796}
+NoRule : {'car in': 936, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2515, 'road length': 12710, 'crash times': 25, 'Vmax': 44.44444444444444, 'car out': 774}
+
+RightHand : {'car in': 926, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2528, 'road length': 12710, 'crash times': 32, 'Vmax': 44.44444444444444, 'car out': 751}
+NoRule : {'car in': 986, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2528, 'road length': 12710, 'crash times': 31, 'Vmax': 44.44444444444444, 'car out': 812}
+
+RightHand : {'car in': 1093, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2705, 'road length': 12710, 'crash times': 43, 'Vmax': 44.44444444444444, 'car out': 901}
+NoRule : {'car in': 1038, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2705, 'road length': 12710, 'crash times': 43, 'Vmax': 44.44444444444444, 'car out': 861}
+
+RightHand : {'car in': 747, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2020, 'road length': 12710, 'crash times': 28, 'Vmax': 44.44444444444444, 'car out': 587}
+NoRule : {'car in': 800, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2020, 'road length': 12710, 'crash times': 23, 'Vmax': 44.44444444444444, 'car out': 646}
+
+RightHand : {'car in': 1153, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2969, 'road length': 12710, 'crash times': 25, 'Vmax': 44.44444444444444, 'car out': 1004}
+NoRule : {'car in': 1115, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2969, 'road length': 12710, 'crash times': 40, 'Vmax': 44.44444444444444, 'car out': 948}
+
+RightHand : {'car in': 689, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1812, 'road length': 12710, 'crash times': 17, 'Vmax': 44.44444444444444, 'car out': 542}
+NoRule : {'car in': 709, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1812, 'road length': 12710, 'crash times': 22, 'Vmax': 44.44444444444444, 'car out': 553}
+
+RightHand : {'car in': 1070, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2718, 'road length': 12710, 'crash times': 43, 'Vmax': 44.44444444444444, 'car out': 886}
+NoRule : {'car in': 1026, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2718, 'road length': 12710, 'crash times': 37, 'Vmax': 44.44444444444444, 'car out': 867}
+
+RightHand : {'car in': 1025, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2704, 'road length': 12710, 'crash times': 36, 'Vmax': 44.44444444444444, 'car out': 862}
+NoRule : {'car in': 1057, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2704, 'road length': 12710, 'crash times': 53, 'Vmax': 44.44444444444444, 'car out': 858}
+
+RightHand : {'car in': 1094, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2935, 'road length': 12710, 'crash times': 28, 'Vmax': 44.44444444444444, 'car out': 937}
+NoRule : {'car in': 1128, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2935, 'road length': 12710, 'crash times': 48, 'Vmax': 44.44444444444444, 'car out': 945}
+
+RightHand : {'car in': 980, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2637, 'road length': 12710, 'crash times': 22, 'Vmax': 44.44444444444444, 'car out': 806}
+NoRule : {'car in': 988, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2637, 'road length': 12710, 'crash times': 34, 'Vmax': 44.44444444444444, 'car out': 827}
+
+RightHand : {'car in': 773, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1965, 'road length': 12710, 'crash times': 19, 'Vmax': 44.44444444444444, 'car out': 608}
+NoRule : {'car in': 753, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1965, 'road length': 12710, 'crash times': 18, 'Vmax': 44.44444444444444, 'car out': 577}
+
+RightHand : {'car in': 805, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2087, 'road length': 12710, 'crash times': 32, 'Vmax': 44.44444444444444, 'car out': 632}
+NoRule : {'car in': 780, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 2087, 'road length': 12710, 'crash times': 26, 'Vmax': 44.44444444444444, 'car out': 628}
+
+RightHand : {'car in': 761, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1941, 'road length': 12710, 'crash times': 11, 'Vmax': 44.44444444444444, 'car out': 610}
+NoRule : {'car in': 759, 'frequency': 0.3814769668058663, 'Vmin': 22.22222222222222, 'test time': 1941, 'road length': 12710, 'crash times': 25, 'Vmax': 44.44444444444444, 'car out': 602}
+
