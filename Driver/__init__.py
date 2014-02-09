@@ -4,6 +4,7 @@ sys.path.append('../')
 from Car import car
 from . import FSA
 from . import No_Rule_FSA
+from . import Speed_First_FSA
 import random
 
 TYPE = ["normal", "badSight", "old", "drunk"]
@@ -13,9 +14,12 @@ delta = {
             "old": (-30, 1, 2, 0),
             "drunk": (-50, random.randint(1, 2), -1, 0.05)
         }
+        
+basicViewRange = 150
+basicReflectTime = 1.25
 
 class driver(object):
-    def __init__(self, _id, road, type):
+    def __init__(self, _id, road, test_type):
         self._id = _id
         self.road = road
         self.journey = 0
@@ -36,11 +40,11 @@ class driver(object):
         reflectTimeError = random.normalvariate(0, 0.1)
         if abs(reflectTimeError) > 0.6:
             reflectTimeError = reflectTimeError / abs(reflectTimeError) * 0.6
-        self.reflectTime = 0.4 + reflectTimeError + delta[self.type][1]
+        self.reflectTime = basicReflectTime + reflectTimeError + delta[self.type][1]
         viewRangeError = random.normalvariate(0, 10)
         if abs(viewRangeError) > 40:
             viewRangeError = viewRangeError / abs(viewRangeError) * 40
-        self.viewRange = self.basicViewRange = 300 + viewRangeError + delta[self.type][0]
+        self.viewRange = basicViewRange + viewRangeError + delta[self.type][0]
         tmpHoldV = random.normalvariate(road.Vmin + (road.Vmax - road.Vmin) / 3, 8)
         if tmpHoldV < road.Vmin:
             tmpHoldV = road.Vmin
@@ -53,7 +57,7 @@ class driver(object):
         elif tmpMaxV > road.Vmax:
             tmpMaxV = road.Vmax
         self.maxV = tmpMaxV
-        #revisited
+        
         self.car = car(self.holdV)
         self.pos = (road.piece[0], 0, -self.car.length, 0)
         chaseRangeError = random.normalvariate(0, 5)
@@ -64,14 +68,13 @@ class driver(object):
             self.viewRange -= 40
             self.chaseRange -= 10
             self.safeLine += 1
-        if type == "RightHand":
+        if test_type == "RightHand":
             self.FSA = FSA.driveFSA(self)
-        else:
+        elif test_type == "NoRule":
             self.FSA = No_Rule_FSA.driveFSA(self)
+        elif test_type == "SpeedFirst":
+            self.FSA = Speed_First_FSA.driveFSA(self)
         self.trance = 0.005 + delta[self.type][3]
         self.crashTime = 0
         self.crash = False
         self.option = "move"
-        
-        
-        

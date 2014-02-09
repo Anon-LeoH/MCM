@@ -1,21 +1,31 @@
 from Test import test
 from copy import deepcopy as cpy
 from Road import Road
+from Driver import driver
 import random
 
 f1 = open("Data/data", "w")
-road = Road()
+f2 = open("Data/driver", "w")
+test_type = ["RightHand","NoRule","SpeedFirst"]
+type_len = 3
+road_type = Road()
+drivers_list = [ [] , [] , [] ]
+show_time = [ [] , [] , [] ]
 PoissonCoef = random.uniform(0.05, 0.7)
+testTimes = 1
 
-def runTest(template_test,type_name):
+def runTest(template_test,type_id):
     tmpTest1 = cpy(template_test)
-    tmpTest1.type = type_name
-    tmpTest1.road = road
-    tmpTest1.PoissonCoef = PoissonCoef
-    time = 0
+    tmpTest1.type = test_type[type_id]
+    #tmpTest1.road = road_type
+    #tmpTest1.PoissonCoef = PoissonCoef
+    pointer = 0
+    totalCar = len(drivers_list[type_id])
     for j in xrange(tmpTest1.testTime):
         tmpTest1.clearCrash()
-        tmpTest1.handleCarIn()
+        if pointer < totalCar and show_time[type_id][pointer] == j:
+            tmpTest1.handleCarIn(drivers_list[type_id][pointer])
+            pointer += 1
         tmpTest1.handleCarOut()        
         tmpTest1.handleMove()
         tmpTest1.handleSwitch()
@@ -23,13 +33,42 @@ def runTest(template_test,type_name):
         tmpTest1.finish()
         tmpTest1.calculateDensity()
         tmpTest1.makeDecision()
-    f1.write(type_name + " : " + str( {"car in": tmpTest1.inCar, "car out": tmpTest1.receiveCar, "crash times": tmpTest1.crashCar, "test time": tmpTest1.testTime, "road length": tmpTest1.road.length, "Vmin": tmpTest1.road.Vmin, "Vmax": tmpTest1.road.Vmax, "frequency": tmpTest1.PoissonCoef} ) + "\n")
+    f1.write(test_type[type_id] + " : " + str( {"car in": tmpTest1.inCar, "car out": tmpTest1.receiveCar, "crash times": tmpTest1.crashCar}) + "\n")
 
-for i in xrange(100):
+def init_drivers(testTime):
+    inCarPro = 0
+    cnt = 0
+    for i in xrange(type_len):
+        drivers_list[i] = []
+        show_time[i] = []
+    
+    for j in xrange(testTime):
+        Probability = random.random()
+        inCarPro += Probability
+        if inCarPro >= 1:
+            inCarPro -= 1
+        if inCarPro <= PoissonCoef:
+            for i in xrange(type_len):
+                drivers_list[i].append(driver(cnt,road_type,test_type[i]))
+                show_time[i].append(j)
+            cnt += 1
+            inCarPro = 0
+        else:
+            drivers_list.append(None)
+
+def outputCarInfo():
+    for item in drivers_list[0]:
+        f2.write(str({"HoldV" : item.holdV , "ReflectTime" : item.reflectTime , "ViewRange" : item.viewRange , "ChaseRange" : item.chaseRange , "SafeRange" : item.safeLine}) + "\n")
+    
+for i in xrange(testTimes):
     tmpTest = test()
-    runTest(tmpTest,"RightHand")
-    runTest(tmpTest,"NoRule")
-    f1.write('\n')
+    init_drivers(tmpTest.testTime)
+    outputCarInfo()
+    f1.write("Road type : " + str({"road length": tmpTest.road.length, "Vmin": tmpTest.road.Vmin, "Vmax": tmpTest.road.Vmax, "frequency": tmpTest.PoissonCoef , "test time": tmpTest.testTime}) + "\n")
+    for j in xrange(type_len):
+        runTest(tmpTest,j)
+    f1.write("\n")
     print "Finish Case " + str(i + 1)
     
 f1.close()
+f2.close()

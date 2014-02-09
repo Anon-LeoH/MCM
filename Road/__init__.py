@@ -14,6 +14,12 @@ FC = {
          ("gravel", "wet"): 0.35,
      }
 g = 9.83218
+
+minStraight = 1000
+maxStraight = 4000
+minCurve = 200
+maxCurve = 650
+maxCurveNum = 4
      
 class Road(object):
     def __init__(self):
@@ -39,11 +45,11 @@ class Road(object):
         self.fc = FC[(self.type, self.weather)]
         self.maxa = g * self.fc
         self.minRadius = self.Vmax ** 2 / self.fc / g
-        numberOfCurve = random.randint(0, 4)
-        self.piece.append(RoadPiece.pieceOfRoad(random.randint(2000, 8000)))
+        numberOfCurve = random.randint(0, maxCurveNum)
+        self.piece.append(RoadPiece.pieceOfRoad(random.randint(minStraight, maxStraight)))
         for i in xrange(numberOfCurve):
-            self.piece.append(RoadPiece.makeCurve(RoadPiece.pieceOfRoad(random.randint(400, 1300)), self.minRadius))
-            self.piece.append(RoadPiece.pieceOfRoad(random.randint(2000, 8000)))
+            self.piece.append(RoadPiece.makeCurve(RoadPiece.pieceOfRoad(random.randint(minCurve, maxCurve)), self.minRadius))
+            self.piece.append(RoadPiece.pieceOfRoad(random.randint(minStraight, maxStraight)))
         self.piece.append(RoadPiece.pieceOfRoad(0))
         self.length = 0
         for item in self.piece:

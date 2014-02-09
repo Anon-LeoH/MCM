@@ -1,4 +1,5 @@
 import random
+
 class driveFSA(object):
     def __init__(self, driver):
         self.driver = driver
@@ -23,19 +24,17 @@ class driveFSA(object):
         self.nowStatus["carInSafeLineRight"] = carInSafeLine[0]
         if self.nowStatus["carInSafeLineRight"] == None:
             self.nowStatus["lane"] = "Right"
-            if self.nowStatus["carInViewRight"] != None:
         elif self.nowStatus["carInSafeLineRight"].velocity >= self.driver.holdV:
             self.nowStatus["lane"] = "Right"
         elif self.nowStatus["carInSafeLineLeft"] == None:
             self.nowStatus["lane"] = "Left"
-            if self.nowStatus["carInViewLeft"] != None:
         elif self.nowStatus["carInSafeLineLeft"].velocity >= self.driver.holdV:
             self.nowStatus["lane"] = "Left"
         else:
             self.driver.car.velocity = self.nowStatus["carInSafeLineRight"].velocity
             self.nowStatus["lane"] = "Right"
     
-    def judge(self, carInView, carInSafeLine, carBack, carChase):
+    def judge(self, carInView, carInSafeLine, carBack, carChase,perTime):
         if self.driver.crash:
             self.driver.car.a = self.driver.road.maxa
             return "crash"
@@ -55,15 +54,11 @@ class driveFSA(object):
             self.driver.car.a = -random.normalvariate(1,self.driver.road.maxa)
             return "braking!"
         
-        if self.nowStatus["braking!"] >= self.driver.reflectTime:
-            self.driver.car.a = self.driver.road.maxa
-            return "braking!"
-        
         if self.nowStatus["carInSafeLine" + self.nowStatus["lane"]] != None:
-            self.nowStatus["braking!"] += 2
             if self.nowStatus["braking!"] >= self.driver.reflectTime:
-                self.driver.car.a = self.driver.road.maxa 
+                self.driver.car.a = -self.driver.road.maxa
                 return "braking!"
+            self.nowStatus["braking!"] += perTime
             return "reflecting"
         
         self.nowStatus["braking!"] = 0

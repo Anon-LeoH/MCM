@@ -1,0 +1,5 @@
+Road type : {'Vmax': 33.333333333333336, 'road length': 12037, 'frequency': 0.1559269547665764, 'test time': 3096, 'Vmin': 11.11111111111111}
+RightHand : {'crash times': 16, 'car in': 678, 'car out': 314}
+NoRule : {'crash times': 16, 'car in': 678, 'car out': 323}
+SpeedFirst : {'crash times': 4, 'car in': 678, 'car out': 336}
+
