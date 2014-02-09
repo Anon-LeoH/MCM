@@ -1,5 +1,12 @@
-Road type : {'Vmax': 33.333333333333336, 'road length': 12037, 'frequency': 0.1559269547665764, 'test time': 3096, 'Vmin': 11.11111111111111}
-RightHand : {'crash times': 16, 'car in': 678, 'car out': 314}
-NoRule : {'crash times': 16, 'car in': 678, 'car out': 323}
-SpeedFirst : {'crash times': 4, 'car in': 678, 'car out': 336}
+Road type : {'Vmax': 33.333333333333336, 'road length': 11949, 'frequency': 0.5949028538939048, 'test time': 2149, 'Vmin': 11.11111111111111}
+RightHand : {'crash times': 2, 'car in': 718, 'car out': 290}
+NoRule : {'crash times': 10, 'car in': 718, 'car out': 284}
+SpeedFirst : {'crash times': 13, 'car in': 718, 'car out': 277}
+NS : {'crash times': 0, 'car in': 718, 'car out': 285}
 
+Road type : {'Vmax': 22.22222222222222, 'road length': 4197, 'frequency': 0.14306754477661338, 'test time': 3151, 'Vmin': 11.11111111111111}
+RightHand : {'crash times': 165, 'car in': 1667, 'car out': 0}
+NoRule : {'crash times': 132, 'car in': 1667, 'car out': 0}
+SpeedFirst : {'crash times': 123, 'car in': 1667, 'car out': 0}
+Road type : {'Vmax': 22.22222222222222, 'road length': 8784, 'frequency': 0.09820383435853454, 'test time': 3695, 'Vmin': 11.11111111111111}
+Road type : {'Vmax': 33.333333333333336, 'road length': 17660, 'frequency': 0.830043048620203, 'test time': 2987, 'Vmin': 16.666666666666668}

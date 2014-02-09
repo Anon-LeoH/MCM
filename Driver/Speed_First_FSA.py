@@ -16,30 +16,13 @@ class driveFSA(object):
                              "lane": "Right",
                              "braking!": 0,
                          }
-    
-    def driveInRoad(self, carInView, carInSafeLine):
-        self.nowStatus["carInViewLeft"] = carInView[1]
-        self.nowStatus["carInViewRight"] = carInView[0]
-        self.nowStatus["carInSafeLineLeft"] = carInSafeLine[1]
-        self.nowStatus["carInSafeLineRight"] = carInSafeLine[0]
-        if self.nowStatus["carInSafeLineRight"] == None:
-            self.nowStatus["lane"] = "Right"
-        elif self.nowStatus["carInSafeLineLeft"] == None:
-            self.nowStatus["lane"] = "Left"
-        elif self.nowStatus["carInSafeLineRight"].velocity >= self.driver.holdV:
-            self.nowStatus["lane"] = "Right"
-        elif self.nowStatus["carInSafeLineLeft"].velocity >= self.driver.holdV:
-            self.nowStatus["lane"] = "Left"
-        elif self.nowStatus["carInSafeLineRight"].velocity > self.nowStatus["carInSafeLineLeft"].velocity:
-            self.driver.car.velocity = self.nowStatus["carInSafeLineRight"].velocity
-            self.nowStatus["lane"] = "Right"
-        else:
-            self.driver.car.velocity = self.nowStatus["carInSafeLineLeft"].velocity
+        Probability = random.random()
+        if Probability < 0.5:
             self.nowStatus["lane"] = "Left"
     
     def judge(self, carInView, carInSafeLine, carBack, carChase,perTime):
         if self.driver.crash:
-            self.driver.car.a = self.driver.road.maxa
+            self.driver.car.a = -self.driver.road.maxa
             return "crash"
         self.nowStatus["pos"] = self.driver.pos
         self.nowStatus["carInViewLeft"] = carInView[1]

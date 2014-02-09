@@ -4,13 +4,13 @@ from Road import Road
 from Driver import driver
 import random
 
-f1 = open("Data/data", "w")
+f1 = open("Data/data", "a")
 f2 = open("Data/driver", "w")
-test_type = ["RightHand","NoRule","SpeedFirst"]
-type_len = 3
+test_type = ["RightHand","NoRule","SpeedFirst","NS"]
+type_len = 4
 road_type = Road()
-drivers_list = [ [] , [] , [] ]
-show_time = [ [] , [] , [] ]
+drivers_list = [ [] , [] , [] , [] ]
+show_time = [ [] , [] , [] , [] ]
 PoissonCoef = random.uniform(0.05, 0.7)
 testTimes = 1
 

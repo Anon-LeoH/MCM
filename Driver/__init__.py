@@ -5,6 +5,7 @@ from Car import car
 from . import FSA
 from . import No_Rule_FSA
 from . import Speed_First_FSA
+from . import NS
 import random
 
 TYPE = ["normal", "badSight", "old", "drunk"]
@@ -74,6 +75,8 @@ class driver(object):
             self.FSA = No_Rule_FSA.driveFSA(self)
         elif test_type == "SpeedFirst":
             self.FSA = Speed_First_FSA.driveFSA(self)
+        elif test_type == "NS":
+            self.FSA = NS.driveFSA(self)
         self.trance = 0.005 + delta[self.type][3]
         self.crashTime = 0
         self.crash = False

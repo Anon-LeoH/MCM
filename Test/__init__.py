@@ -20,52 +20,9 @@ class test(object):
         self.PoissonCoef = random.uniform(0.05, 0.99)
         self.type = "RightHand"
     
-    def carIn(self,template_car):
-        tmpCar = cpy(template_car)
-        length = len(self.drivers)
-        tmpCar._id = length
-        fl = fr = None
-        for i in xrange(0, min(length, 3), 1):
-            if fl != None and fr != None:
-                break
-            if fl == None and self.drivers[i].FSA.nowStatus["lane"] == "Left":
-                fl = self.drivers[i]
-            if fr == None and self.drivers[i].FSA.nowStatus["lane"] == "Right":
-                fr = self.drivers[i]
-        chaseList = []
-        viewList = []
-        if fl != None:
-            if abs(fl.journey - tmpCar.journey) <= tmpCar.chaseRange:
-                chaseList.append(fl)
-                viewList.append(fl)
-            elif abs(fl.journey - tmpCar.journey) <= tmpCar.viewRange:
-                chaseList.append(None)
-                viewList.append(fl)
-            else:
-                fl = None
-        if fl == None:
-            chaseList.append(fl)
-            viewList.append(fl)
-        if fr != None:
-            if abs(fr.journey - tmpCar.journey) <= tmpCar.chaseRange:
-                chaseList.append(fr)
-                viewList.append(fr)
-            elif abs(fr.journey - tmpCar.journey) <= tmpCar.viewRange:
-                chaseList.append(None)
-                viewList.append(fr)
-            else:
-                fr = None
-        if fr == None:
-            chaseList.append(fr)
-            viewList.append(fr)
-        if chaseList[0] != None and chaseList[1] != None:
-            return
-        tmpCar.FSA.driveInRoad(viewList, chaseList)
-        self.drivers.append(tmpCar)
-        self.inCar += 1
-    
     def handleCarIn(self,tmpCar):
-        self.carIn(tmpCar)
+        self.drivers.append(cpy(tmpCar))
+        self.inCar += 1
     
     def handleCarOut(self):
         removeList = []
@@ -90,12 +47,12 @@ class test(object):
     
     def handleMove(self):
         widthOfCar = 2.5
-        for item in self.drivers:            
+        for item in self.drivers:
             deltaS = item.car.velocity * perTime + 0.5 * item.car.a * (perTime ** 0.5)
-            if item.option == "changeLane":
-                deltaS = (deltaS ** 2 - widthOfCar ** 2) ** 0.5
+            #if item.option == "changeLane":
+             #   deltaS = (deltaS ** 2 - widthOfCar ** 2) ** 0.5
             item.journey += deltaS
-            item.car.velocity += item.car.a
+            item.car.velocity += item.car.a * perTime
             if item.car.velocity > item.maxV:
                 item.car.velocity = item.maxV
             if item.car.velocity < 0:
